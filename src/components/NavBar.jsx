@@ -8,16 +8,22 @@ const Navbar = () => {
         {/* Logo + Título a la izquierda */}
         <div className="flex items-center">
           <img src={logo} alt="lowfreqlogo" className="w-11 mr-4" />
-          <Link to="/" className="text-2xl font-bold">LowFreqMx</Link>
+          <Link to="/" className="text-2xl font-bold italic">LOWFREQ</Link>
         </div>
 
         {/* Menú a la derecha */}
         <ul className="flex space-x-6 text-lg font-medium">
           <li>
-            <Link to="/artists" className="hover:text-gray-400 transition">Artistas</Link>
+            <Link to="/artists" className="hover:text-gray-400 transition">Artists</Link>
           </li>
           <li>
-            <Link to="/eventos" className="hover:text-gray-400 transition">Eventos</Link>
+            <Link to="/eventos" className="hover:text-gray-400 transition">Events</Link>
+          </li>
+          <li>
+            <Link to="/music" className="hover:text-gray-400 transition">Music</Link>
+          </li>
+          <li>
+            <Link to="/contact" className="hover:text-gray-400 transition">Contact</Link>
           </li>
         </ul>
       </div>
