@@ -5,6 +5,7 @@ import Artists from "./pages/Artists";
 import Eventos from "./pages/Eventos";
 import Musica from "./pages/Musica";
 import Contact from "./pages/Contact";
+import ArtistProfile from "./components/ArtistProfile";
 import './styles/global.css'
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
           <Route path="eventos" element={<Eventos />} />
           <Route path="music" element={<Musica />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="/artist/:id" element={<ArtistProfile />} />
+          
         </Route>
       </Routes>
     </Router>

@@ -7,6 +7,7 @@ const MainLayout = () => {
       <Navbar />
       <main className="p-4">
         <Outlet />
+
       </main>
     </>
   );

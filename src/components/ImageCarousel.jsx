@@ -15,14 +15,14 @@ const ImageCarousel = ({ images, interval = 5000 }) => {
   }, [images.length, interval]);
 
   return (
-    <div className="relative w-full h-100 overflow-hidden">
+    <div className="relative w-full h-150  overflow-hidden">
       {images.map((img, index) => (
         <img
           key={index}
           src={img}
           alt={`carousel-${index}`}
-          className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
-            index === currentIndex ? "opacity-100" : "opacity-0"
+          className={`absolute w-full h-full object-cover transition-opacity duration-1000  ${
+            index === currentIndex ? "opacity-50" : "opacity-0"
           }`}
         />
       ))}

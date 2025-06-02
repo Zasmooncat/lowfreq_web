@@ -9,16 +9,9 @@ const ArtistCard = ({ image, name, description, downloadLink }) => {
                 alt={name}
                 className="w-full h-48 object-cover rounded-xl mb-4"
             />
-            <h2 className="text-xl font-semibold mb-2">{name}</h2>
-            <p className="text-gray-600 mb-4">{description}</p>
-            <a
-                href={downloadLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-black text-white px-4 py-2 rounded-full hover:bg-gray-500 transition"
-            >
-                Descargar Rider
-            </a>
+            <h2 className="text-xl uppercase mb-2">{name}</h2>
+            
+           
         </div>
     );
 };
