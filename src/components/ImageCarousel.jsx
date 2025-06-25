@@ -15,7 +15,7 @@ const ImageCarousel = ({ images, interval = 5000 }) => {
   }, [images.length, interval]);
 
   return (
-    <div className="relative w-full h-150  overflow-hidden">
+    <div className="relative w-full h-175  overflow-hidden">
       {images.map((img, index) => (
         <img
           key={index}

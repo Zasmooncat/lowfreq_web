@@ -1,14 +1,33 @@
-import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { FaBars, FaTimes, FaInstagram } from "react-icons/fa";
 import logo from "../imagenes/logos/lowfreqlogoinv.png";
-import { Link as ScrollLink } from "react-scroll";
-import { Link } from "react-router-dom";
+import { scrollToSection } from "../utils/scrollToSection";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const handleNavigation = (sectionId) => {
+    setIsOpen(false);
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: sectionId } });
+    } else {
+      // Si ya estás en la home, scroll directo
+      setTimeout(() => scrollToSection(sectionId), 100); // Espera breve por si aún no se ha montado
+    }
+  };
+
+  // Este efecto se activa cuando vienes de otra ruta con intención de hacer scroll
+  useEffect(() => {
+    const scrollTarget = location.state?.scrollTo;
+    if (scrollTarget) {
+      setTimeout(() => {
+        scrollToSection(scrollTarget);
+      }, 300); // Da tiempo a cargar el DOM
+    }
+  }, [location]);
 
   return (
     <nav className="bg-black text-white shadow-lg fixed w-full z-50">
@@ -16,120 +35,60 @@ const Navbar = () => {
         {/* Logo + Título */}
         <div className="flex items-center">
           <img src={logo} alt="lowfreqlogo" className="w-11 mr-4" />
-          <Link
-            to="/"
-            smooth={true}
-            duration={500}
+          <span
+            onClick={() => handleNavigation("home")}
             className="text-2xl font-bold italic cursor-pointer"
-            onClick={closeMenu}
           >
             LOWFREQ
-          </Link>
+          </span>
         </div>
 
-        {/* Icono menú hamburguesa solo en móviles */}
+        {/* Menú hamburguesa */}
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-2xl focus:outline-none">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-2xl">
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
 
-        {/* Menú en escritorio */}
+        {/* Menú escritorio */}
         <ul className="hidden md:flex space-x-6 text-lg font-medium">
+          <li onClick={() => handleNavigation("artists")} className="cursor-pointer uppercase italic hover:text-gray-400">Artistas</li>
+          <li onClick={() => handleNavigation("eventos")} className="cursor-pointer uppercase italic hover:text-gray-400">Eventos</li>
           <li>
-            <ScrollLink
-              to="artists"
-              smooth={true}
-              duration={500}
-              className="uppercase italic hover:text-gray-400 transition cursor-pointer"
-            >
-              Artists
-            </ScrollLink>
+            <a href="https://www.beatport.com/es/label/lowfreqmx/28822" className="uppercase italic hover:text-gray-400">
+              Música
+            </a>
           </li>
+          <li onClick={() => handleNavigation("contact")} className="cursor-pointer uppercase italic hover:text-gray-400">Contacto</li>
           <li>
-            <ScrollLink
-              to="eventos"
-              smooth={true}
-              duration={500}
-              className="uppercase italic hover:text-gray-400 transition cursor-pointer"
-            >
-              Events
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              to="music"
-              smooth={true}
-              duration={500}
-              className="uppercase italic hover:text-gray-400 transition cursor-pointer"
-            >
-              Music
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              to="contact"
-              smooth={true}
-              duration={500}
-              className="uppercase italic hover:text-gray-400 transition cursor-pointer"
-            >
-              Contact
-            </ScrollLink>
+            <a href="https://www.instagram.com/lowfreqmx/" target="_blank" rel="noopener noreferrer">
+              <FaInstagram className="text-white hover:text-pink-500" />
+            </a>
           </li>
         </ul>
       </div>
+      
 
-      {/* Menú desplegable móvil */}
+      {/* Menú móvil */}
       {isOpen && (
-        <ul className="flex flex-col items-center gap-6 md:hidden text-lg font-medium
-                       fixed top-16 left-0 w-full py-8 
-                       bg-black/50 backdrop-blur-md shadow-lg z-40">
+        <ul className="flex flex-col items-center gap-6 md:hidden text-lg font-medium fixed top-16 left-0 w-full py-8 bg-black/50 backdrop-blur-md shadow-lg z-40 uppercase italic">
+          <li onClick={() => handleNavigation("artists")}>Artistas</li>
+          <li onClick={() => handleNavigation("eventos")}>Eventos</li>
           <li>
-            <ScrollLink
-              to="artists"
-              smooth={true}
-              duration={500}
-              className="uppercase italic hover:text-gray-300 transition cursor-pointer"
-              onClick={closeMenu}
-            >
-              Artists
-            </ScrollLink>
+            <a href="https://www.beatport.com/es/label/lowfreqmx/28822">Música</a>
           </li>
+          <li onClick={() => handleNavigation("contact")}>Contacto</li>
           <li>
-            <ScrollLink
-              to="eventos"
-              smooth={true}
-              duration={500}
-              className="uppercase italic hover:text-gray-300 transition cursor-pointer"
-              onClick={closeMenu}
-            >
-              Events
-            </ScrollLink>
+            <li>
+            <a href="https://www.instagram.com/lowfreqmx/" target="_blank" rel="noopener noreferrer">
+              <FaInstagram className="text-white hover:text-pink-500" />
+            </a>
           </li>
-          <li>
-            <ScrollLink
-              to="music"
-              smooth={true}
-              duration={500}
-              className="uppercase italic hover:text-gray-300 transition cursor-pointer"
-              onClick={closeMenu}
-            >
-              Music
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              to="contact"
-              smooth={true}
-              duration={500}
-              className="uppercase italic hover:text-gray-300 transition cursor-pointer"
-              onClick={closeMenu}
-            >
-              Contact
-            </ScrollLink>
           </li>
         </ul>
+        
       )}
+      
     </nav>
   );
 };

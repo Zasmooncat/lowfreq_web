@@ -1,31 +1,41 @@
 const events = [
-                         {
-                            id: 1,
-                            image: "/assets/imagenes/eventos/evento1.png",
-                            name: "Lowfreq Night Vol. 1",
-                            date: "15 Junio 2025",
-                            location: "CDMX – Foro Indie Rocks",
-                        },
-                        {
-                            id: 2,
-                            image: "/assets/imagenes/eventos/evento2.png",
-                            name: "Lowfreq Night Vol. 1",
-                            date: "15 Junio 2025",
-                            location: "CDMX – Foro Indie Rocks",
-                        },
-                        {
-                            id: 3,
-                            image: "/assets/imagenes/eventos/evento3.png",
-                            name: "Bass & Beats",
-                            date: "22 Julio 2025",
-                            location: "Playa del Carmen – La Santanera",
-                        },
-                        {
-                            id: 4,
-                            image: "/assets/imagenes/eventos/evento4.png",
-                            name: "Lowfreq Showcase",
-                            date: "12 Agosto 2025",
-                            location: "Puerto Escondido – Club Rara",
-                        },
-                    ];
-export default events;                    
+  {
+    id: 1,
+    image: "src/imagenes/eventos/1ronisize.jpg",
+    igLink: "https://www.instagram.com/p/DJ5gc0URu5g/",
+    
+  },
+  {
+    id: 2,
+    image: "src/imagenes/eventos/2londonelec.jpg",
+    igLink: "https://www.instagram.com/p/DDz2VuGvTnr/",
+  },
+  {
+    id: 3,
+    image: "src/imagenes/eventos/3londondoctor.jpg",
+    igLink: "https://www.instagram.com/reel/DDuzlu_BqKO/",
+  },
+  {
+    id: 4,
+    image: "src/imagenes/eventos/4subaries.jpg",
+    igLink: "https://www.instagram.com/reel/Csample04/",
+  },
+  {
+    id: 5,
+    image: "src/imagenes/eventos/5bennydope.jpg",
+    igLink: "https://www.instagram.com/p/Cs73X6yuv3R/",
+  },
+  {
+    id: 6,
+    image: "src/imagenes/eventos/6edsolotyke.jpg",
+    igLink: "https://www.instagram.com/reel/C2-S_JcuLGD/",
+  },
+
+   {
+    id: 7,
+    image: "src/imagenes/eventos/7pavan.jpg",
+    igLink: "https://www.instagram.com/reel/ChXpeBHpLe7/",
+  }
+];
+
+export default events;
