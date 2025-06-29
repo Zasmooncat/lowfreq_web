@@ -36,29 +36,29 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-md  p-4  bg-black shadow-md space-y-4"
+      className=" bg-black p-4  space-y-4"
     >
       
 
       <div>
-        <label className="block text-sm font-medium uppercase bg-gray-100 text-black">Email</label>
+        <label className="  p-1 mt-2 block text-sm font-medium uppercase bg-neutral-800 text-gray-200">Email</label>
         <input
           type="email"
           name="email"
           value={form.email}
           onChange={handleChange}
-          className="w-full p-2 border bg-black mt-1"
+          className="w-full p-2 bg-gray-200 mt-1 placeholder:text-gray-400"
           placeholder="tucorreo@example.com"
         />
       </div>
 
       <div>
-        <label className="text-sm font-medium uppercase text-gray-300">Mensaje</label>
+        <label className="p-1 block text-sm font-medium uppercase bg-neutral-800 text-gray-200">Mensaje</label>
         <textarea
           name="mensaje"
           value={form.mensaje}
           onChange={handleChange}
-          className="w-full p-2 border mt-1"
+          className="w-full p-2 bg-gray-200 mt-1 placeholder:text-gray-400"
           rows="4"
           placeholder="Escribe tu mensaje aquí..."
         />
@@ -69,7 +69,7 @@ const ContactForm = () => {
 
       <button
         type="submit"
-        className="boton-elegante"
+        className="flex flex-col sm:flex-row gap-4 justify- mt-5 bg-neutral-800 text-white p-2 px-4 rounded-2xl hover:bg-neutral-500 transition duration-300"
       >
         Enviar
       </button>

@@ -30,17 +30,12 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <nav className="bg-black text-white shadow-lg fixed w-full z-50">
-      <div className="w-full flex justify-between items-center px-6 py-4">
+    <nav className="bg-black/70 backdrop-blur-md text-white shadow-lg fixed w-full z-50">
+      <div className="w-full flex justify-between items-center px-6 py-2">
         {/* Logo + Título */}
         <div className="flex items-center">
-          <img src={logo} alt="lowfreqlogo" className="w-11 mr-4" />
-          <span
-            onClick={() => handleNavigation("home")}
-            className="text-2xl font-bold italic cursor-pointer"
-          >
-            LOWFREQ
-          </span>
+          <img src={logo} alt="lowfreqlogo" className="w-11 mr-4 cursor-pointer" onClick={() => handleNavigation("home")} />
+          
         </div>
 
         {/* Menú hamburguesa */}
@@ -55,7 +50,7 @@ const Navbar = () => {
           <li onClick={() => handleNavigation("artists")} className="cursor-pointer uppercase italic hover:text-gray-400">Artistas</li>
           <li onClick={() => handleNavigation("eventos")} className="cursor-pointer uppercase italic hover:text-gray-400">Eventos</li>
           <li>
-            <a href="https://www.beatport.com/es/label/lowfreqmx/28822" className="uppercase italic hover:text-gray-400">
+            <a href="https://www.beatport.com/es/label/lowfreqmx/28822" className="uppercase italic hover:text-gray-400" target="_blank" rel="noopener noreferrer">
               Música
             </a>
           </li>
