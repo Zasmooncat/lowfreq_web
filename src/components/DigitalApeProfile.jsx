@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { FaInstagram, FaSpotify, FaFacebook, FaYoutube, FaBandcamp } from 'react-icons/fa';
+import { FaInstagram, FaSpotify, FaFacebook, FaYoutube } from 'react-icons/fa';
 import artistsInfo from '../utils/artistsInfo';
 
-const ArtistProfile = () => {
+const DigitalApeProfile = () => {
   const { id } = useParams();
   const artist = artistsInfo.find((artist) => artist.id === parseInt(id));
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -66,7 +66,7 @@ const ArtistProfile = () => {
         {artist.instagramLink && <a href={artist.instagramLink} target="_blank" rel="noreferrer"><FaInstagram className="text-gray-500 hover:text-pink-500" /></a>}
         {artist.spotyfyLink && <a href={artist.spotyfyLink} target="_blank" rel="noreferrer"><FaSpotify className="text-gray-500 hover:text-green-400" /></a>}
         {artist.facebookLink && <a href={artist.facebookLink} target="_blank" rel="noreferrer"><FaFacebook className="text-gray-500 hover:text-blue-500" /></a>}
-        {artist.bandcampLink && <a href={artist.bandcampLink} target="_blank" rel="noreferrer"><FaBandcamp className="text-gray-500 hover:text-cyan-400" /></a>}
+        {artist.youtubeLink && <a href={artist.youtubeLink} target="_blank" rel="noreferrer"><FaYoutube className="text-gray-500 hover:text-red-500" /></a>}
       </section>
 
       <section>
@@ -130,7 +130,7 @@ const ArtistProfile = () => {
               &times;
             </button>
             <h3 className="text-white text-xl font-semibold italic mb-4 text-center">
-              Contratar a {artist.name}
+              Contratar DIGITAL APE SOUND SYSTEM
             </h3>
             <form
               onSubmit={(e) => {
@@ -171,4 +171,4 @@ const ArtistProfile = () => {
   );
 };
 
-export default ArtistProfile;
+export default DigitalApeProfile;

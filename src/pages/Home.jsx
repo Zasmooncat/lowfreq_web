@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../imagenes/logos/lowfreq_logo_v.png";
 import logoLow from "../imagenes/logos/lowfreqlogoinv.png";
@@ -23,19 +23,22 @@ const Home = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const artistsRef = useRef(null);
+  const eventsRef = useRef(null);
+
   const handleClick = (id) => navigate(`/artist/${id}`);
 
   const openModal = (event) => {
     setSelectedEvent(event);
     setIsModalOpen(true);
-    window.history.pushState({ modal: true }, ""); // Añade una entrada al historial
+    window.history.pushState({ modal: true }, "");
   };
 
   const closeModal = () => {
     setSelectedEvent(null);
     setIsModalOpen(false);
     if (window.history.state?.modal) {
-      window.history.back(); // Vuelve una entrada atrás
+      window.history.back();
     }
   };
 
@@ -78,20 +81,18 @@ const Home = () => {
           className="absolute mt-5 top-5 w-40 sm:w-40 md:w-[300px] z-10 bg-transparent"
         />
       </section>
-      
 
       {/* Artistas */}
-      <section 
-      id="artists" 
-      className="mx-auto bg-neutral-900/70 rounded-2xl"
+      <section
+        id="artists"
+        ref={artistsRef}
+        className="mx-auto bg-neutral-900/70 rounded-2xl"
       >
-
         <div className="flex justify-center items-center mt-12">
-            
           <h2 className="text-3xl my-4 font-bold italic uppercase text-white">Artistas</h2>
         </div>
         <div className="w-11/12 md:w-10/12 mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-20">
             {artistsInfo.map((artist) => (
               <div
                 key={artist.id}
@@ -99,6 +100,7 @@ const Home = () => {
                 className="cursor-pointer rounded-full p-4 shadow transition hover:scale-105"
               >
                 <img
+                  loading="lazy"
                   src={artist.image}
                   alt={artist.name}
                   className="w-48 h-48 mx-auto rounded-full object-cover transform transition duration-300 filter saturate-60 hover:saturate-100"
@@ -111,9 +113,10 @@ const Home = () => {
       </section>
 
       {/* Eventos */}
-      <section 
-      id="eventos" 
-      className="w-11/12 md:w-4/5 mx-auto"
+      <section
+        id="eventos"
+        ref={eventsRef}
+        className="w-11/12 md:w-4/5 mx-auto"
       >
         <h2 className="text-3xl font-bold italic text-center text-white uppercase mb-8 tracking-wide">
           Eventos
@@ -127,6 +130,7 @@ const Home = () => {
             >
               <FaPlay className="text-white text-6xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-70 hover:opacity-100 hover:text-green-500 transition" />
               <img
+                loading="lazy"
                 src={event.image}
                 alt={`Evento ${event.id}`}
                 className="w-full h-64 object-cover"
@@ -168,7 +172,7 @@ const Home = () => {
       <section id="contact" className="rounded-2xl bg-neutral-900/70 text-white p-5 mt-20">
         <div className="flex flex-col items-center justify-center text-center space-y-6 w-full">
           <h2 className="text-3xl font-bold italic uppercase">Contacto</h2>
-          <p>Para cualquier duda o contratación, no dudes en escribirnos y te contestaremos lo antes posible.</p>
+          <p>Para cualquier duda o contratación, ponte en contacto con nosotros rellenando este formulario y te contestaremos lo antes posible.</p>
           <div className="w-full flex justify-center">
             <div className="w-full md:w-2/4">
               <ContactForm />

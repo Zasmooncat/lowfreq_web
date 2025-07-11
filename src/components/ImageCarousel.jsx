@@ -18,6 +18,7 @@ const ImageCarousel = ({ images, interval = 5000 }) => {
     <div className="relative w-screen h-screen  overflow-hidden">
       {images.map((img, index) => (
         <img
+          loading="lazy"
           key={index}
           src={img}
           alt={`carousel-${index}`}

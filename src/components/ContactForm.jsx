@@ -1,79 +1,92 @@
 import { useState } from "react";
 
 const ContactForm = () => {
-  const [form, setForm] = useState({ email: "", mensaje: "" });
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
+  const [showToast, setShowToast] = useState(false);
+  const [formData, setFormData] = useState({ email: "", message: "" });
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!form.email || !form.mensaje) {
-      setError("Todos los campos son obligatorios.");
-      setSuccess("");
-      return;
-    }
+    const form = e.target;
+    const data = new FormData(form);
 
-    // Validación básica de email
-    const emailRegex = /\S+@\S+\.\S+/;
-    if (!emailRegex.test(form.email)) {
-      setError("Por favor introduce un email válido.");
-      setSuccess("");
-      return;
-    }
+    try {
+      await fetch("https://formsubmit.co/ajax/zasmomoxipol@gmail.com", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: data,
+      });
 
-    // Aquí podrías enviar el formulario a una API o backend
-    console.log("Formulario enviado:", form);
-    setSuccess("Mensaje enviado correctamente.");
-    setError("");
-    setForm({ email: "", mensaje: "" });
+      setShowToast(true);
+      setFormData({ email: "", message: "" });
+
+      setTimeout(() => {
+        setShowToast(false);
+      }, 3000);
+    } catch (error) {
+      console.error("Error enviando el formulario", error);
+    }
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className=" bg-black p-4  space-y-4"
-    >
-      
-
-      <div>
-        <label className="  p-1 mt-2 block text-sm font-medium uppercase bg-neutral-800 text-gray-200">Email</label>
-        <input
-          type="email"
-          name="email"
-          value={form.email}
-          onChange={handleChange}
-          className="w-full p-2 bg-gray-200 mt-1 placeholder:text-gray-400"
-          placeholder="tucorreo@example.com"
-        />
-      </div>
-
-      <div>
-        <label className="p-1 block text-sm font-medium uppercase bg-neutral-800 text-gray-200">Mensaje</label>
-        <textarea
-          name="mensaje"
-          value={form.mensaje}
-          onChange={handleChange}
-          className="w-full p-2 bg-gray-200 mt-1 placeholder:text-gray-400"
-          rows="4"
-          placeholder="Escribe tu mensaje aquí..."
-        />
-      </div>
-
-      {error && <p className="text-red-500 text-sm">{error}</p>}
-      {success && <p className="text-green-600 text-sm">{success}</p>}
-
-      <button
-        type="submit"
-        className="flex flex-col sm:flex-row gap-4 justify- mt-5 bg-neutral-800 text-white p-2 px-4 rounded-2xl hover:bg-neutral-500 transition duration-300"
+    <div className="relative">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-black p-4 space-y-4"
       >
-        Enviar
-      </button>
-    </form>
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="box" />
+
+        <div>
+          <label className="p-1 mt-2 block text-sm font-medium uppercase bg-neutral-800 text-gray-200">
+            Email
+          </label>
+          <input
+            type="email"
+            name="email"
+            required
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full p-2 bg-gray-200 text-black mt-1 placeholder:text-gray-400"
+            placeholder="tucorreo@example.com"
+          />
+        </div>
+
+        <div>
+          <label className="p-1 block text-sm font-medium uppercase bg-neutral-800 text-gray-200">
+            Mensaje
+          </label>
+          <textarea
+            name="message"
+            required
+            value={formData.message}
+            onChange={handleChange}
+            className="w-full p-2 bg-gray-200 text-black mt-1 placeholder:text-gray-400"
+            rows="4"
+            placeholder="Escribe tu mensaje aquí..."
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="flex flex-col sm:flex-row gap-4 justify-center mt-5 bg-neutral-800 text-white p-2 px-4 rounded-2xl hover:bg-neutral-500 transition duration-300"
+        >
+          Enviar
+        </button>
+      </form>
+
+      {showToast && (
+        <div className="absolute top-0 right-1/2 mt-2 mr-2 bg-green-500 text-white text-sm px-4 py-2 rounded shadow-lg transition-opacity duration-500">
+          ¡Mensaje enviado con éxito!
+        </div>
+      )}
+    </div>
   );
 };
 

@@ -17,18 +17,13 @@ const artistsInfo = [
         name: "Mooncat",
         image: "/assets/artists/mooncat_blue.webp",
         description: `Dj/productor valenciano destacado por ser uno de los máximos exponentes dentro de la escena drum&bass nacional, con un estilo único e inconfundible tanto en sus producciones como en sus sets. 
- 
-
-Su estilo se caracteriza por un sonido fresco , elegante y contundente cargado de pinceladas de reggae, remezclando temas clásicos llevándolos luego a la pista de baile de una forma magistral..
-
+ Su estilo se caracteriza por un sonido fresco , elegante y contundente cargado de pinceladas de reggae, remezclando temas clásicos llevándolos luego a la pista de baile de una forma magistral.
 En 2016 Mooncat lanza junto a Karlixx, Kursiva, Dubtime y Laura el sello de música electrónica especializado en drum&bass, reggae y jungle SOUTH YARD, donde podemos escuchar sus últimas producciones junto a un creciente catálogo de referencias de grandes artistas del género.`,
         downloadLink: "https://www.dropbox.com/scl/fo/mfxc8ymtqe3lgck9tawlb/APN2L8D-FOnO-l7rUBmQu3c?rlkey=reqm8y5slzq7ve359wsw1e3lq&st=2quj05sj&dl=0",
-        video1: "...",
-        video2: "...",
         spotifyEmbed: "https://open.spotify.com/embed/artist/4TpaRMxJFAVHyLunW3UvwW?utm_source=generator",
         spotyfyLink: "https://open.spotify.com/artist/4TpaRMxJFAVHyLunW3UvwW",
         instagramLink: "https://www.instagram.com/zasmooncat/",
-        facebookLink: null
+        bandcampLink: "https://mooncatdnb.bandcamp.com/"
     },
     {
         id: 3,
@@ -124,8 +119,35 @@ Sound System Jamaicano a través de su conexión con el Reino Unido.`,
         instagramLink: "https://www.instagram.com/sirius_soundz/",
         facebookLink: null,
     },
-    {
+
+        {
         id: 9,
+        name: "Ras Jahshua",
+        image: "/assets/artists/Ras.webp",
+        description:`Cantautor originario de Ciudad de México; Xochimilco
+con 1
+5 años de trayectoria en la escena nacional, ha
+consolidado un estilo vocal personal que lo caracteriza y coloca
+como uno de los exponentes más fuertes dentro del género
+Reggae en México, hoy es talvez el único Deejay que
+sesiona de manera continua en casi todas las grandes
+presentaciones de exponentes Dub en la Ciudad de México y
+provincia, muchas de estas a lado de Bungalo Dub y en su
+momento con Mr Zebre. Un estilo Rub-A-Dub, entre melodías y
+mucho flow surfeando sobre Dance Hall, Steppers,
+Roots, Digital, Dub es algo de lo que puedes encontrar en un
+show mucha energía y fuerza en escena hacen que la gente se
+conecte con él; sesiones de Sound System sin
+importar que sean Selectores o Live Acts, él va a detonar la
+pista de baile
+.`,
+        
+
+        instagramLink: "https://www.instagram.com/rasjahshua/",
+        facebookLink: "https://www.facebook.com/RasJahshua"
+    },
+    {
+        id: 10,
         name: "VJ BALA",
         image: "/assets/artists/VJBALA.webp",
         description: `Marina Mx (VJ BALA)
@@ -143,7 +165,7 @@ Practicante de Lengua de Señas Mexicana.`,
         facebookLink: null
     },
     {
-        id: 10,
+        id: 11,
         name: "Digital Ape Sound System",
         image: "/assets/artists/DigitalApeSoundSystem.webp",
         description: "Primer Sound System de Drum And Bass/Jungle en México por LowFreqMx e Isaac Maya",
@@ -153,6 +175,7 @@ Practicante de Lengua de Señas Mexicana.`,
         instagramLink: "https://www.instagram.com/digitalapess/",
         facebookLink: null
     },
+
 ];
 
 export default artistsInfo;
