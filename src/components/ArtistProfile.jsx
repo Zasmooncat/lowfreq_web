@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaInstagram, FaSpotify, FaFacebook, FaYoutube, FaBandcamp } from 'react-icons/fa';
 import artistsInfo from '../utils/artistsInfo';
+import logo from "../imagenes/logos/lowfreq_logo_v.png";
+import logoLow from "../imagenes/logos/lowfreqlogoinv.png";
+
+
 
 const ArtistProfile = () => {
   const { id } = useParams();
@@ -57,27 +61,36 @@ const ArtistProfile = () => {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="text-center p-6 mt-20">
-        <img src={artist.image} alt={artist.name} className="w-64 h-64 object-cover rounded-full mx-auto" />
+      
+      <div className='bg-linear-to-b from-neutral-500/50 to-black mt-20 p-6 rounded-2xl'>
+       <img
+                src={logo}
+                alt="logo"
+                className=" w-60 mx-auto bg-transparent"
+              />
+      <div className=" text-center rounded-2xl p-6 mt-2">
+        <img src={artist.image} alt={artist.name} className="w-64 h-64 object-cover rounded-full mx-auto border-8 bo" />
         <h1 className="text-3xl font-bold mt-4">{artist.name}</h1>
-      </div>
-
       <section className="flex justify-center gap-6 text-2xl mt-4">
         {artist.instagramLink && <a href={artist.instagramLink} target="_blank" rel="noreferrer"><FaInstagram className="text-gray-500 hover:text-pink-500" /></a>}
         {artist.spotyfyLink && <a href={artist.spotyfyLink} target="_blank" rel="noreferrer"><FaSpotify className="text-gray-500 hover:text-green-400" /></a>}
         {artist.facebookLink && <a href={artist.facebookLink} target="_blank" rel="noreferrer"><FaFacebook className="text-gray-500 hover:text-blue-500" /></a>}
         {artist.bandcampLink && <a href={artist.bandcampLink} target="_blank" rel="noreferrer"><FaBandcamp className="text-gray-500 hover:text-cyan-400" /></a>}
       </section>
+      </div>
+        
 
-      <section>
-        <h2 className="text-xl font-semibold text-white mb-2">Biografía</h2>
+
+      <section >
+        <h2 className="text-xl font-semibold text-white mb-2 mt-1">Biografía</h2>
         <p className="text-gray-400">{artist.description}</p>
       </section>
 
+      </div>
       <section>
-        <button onClick={openModal} className='boton-elegantec mx-auto flex flex-col sm:flex-row gap-4 justify-center'>CONTRATAR</button>
+        <button onClick={openModal} className='boton-elegantec mx-auto flex flex-col sm:flex-row gap-4 justify-center m-2'>CONTRATAR</button>
         <a href={artist.downloadLink} download target='_blank' rel='noopener noreferrer'>
-          <button className="boton-elegante mx-auto flex flex-col sm:flex-row gap-4 justify-center mt-5">PRESSKIT</button>
+          <button className="boton-elegante mx-auto flex flex-col sm:flex-row gap-4 justify-center m-2">PRESSKIT</button>
         </a>
       </section>
 
@@ -117,7 +130,12 @@ const ArtistProfile = () => {
             ))}
           </div>
         </section>
+        
       )}
+      <div className="flex flex-col items-center">
+                  <img className="w-20 h-20" src={logoLow} alt="Lowfreq Logo" />
+                  <p className="mt-2 text-xs">LOWFREQMX®</p>
+                </div>
 
       {/* Modal de contratación */}
       {isModalOpen && (

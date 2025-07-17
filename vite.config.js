@@ -11,7 +11,7 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 5173,
     allowedHosts: [
-      'u6vbwh-ip-189-147-22-210.tunnelmole.net'
+      'dsuudb-ip-189-147-22-210.tunnelmole.net'
     ]
   }
 })

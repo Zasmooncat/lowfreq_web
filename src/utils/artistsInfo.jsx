@@ -29,7 +29,7 @@ En 2016 Mooncat lanza junto a Karlixx, Kursiva, Dubtime y Laura el sello de mús
         id: 3,
         name: "8pril",
         image: "/assets/artists/8pril.webp",
-        description: "8PRIL es una Dj de Drum and Bass mexicana que destaca en la escena por su capturante selección musical con un mezcla muy impecable que la ha llevado a colaborar en presentaciones con grandes pioneros del género",
+        description: "8PRIL es una Dj de Drum and Bass mexicana que destaca en la escena por su capturante selección musical con un mezcla muy impecable que la ha llevado a colaborar en presentaciones con grandes pioneros del género.",
         downloadLink: "https://www.dropbox.com/scl/fi/qyozd6bf13zd5y9rnrnmr/Presskit-8PRIL.pdf?rlkey=6cx2hwkrvr4e878govtrlnvyd&e=1&st=2roqbb8j&dl=0",
 
         video1: "...",
@@ -53,7 +53,7 @@ En 2016 Mooncat lanza junto a Karlixx, Kursiva, Dubtime y Laura el sello de mús
     },
     {
         id: 5,
-        name: "B-dub",
+        name: "B-Dub",
         image: "/assets/artists/b-dub.webp",
         description: "DJ Originario del estado de Mexico, inicia su carrera en 2008 inspirado siempre por el Dnb y pasando por otros generos (Moombahton, Dubstep, Trap) tomando como base de su estilo la linea de bajo, hoy en dia siendo parte de Low Freq con un Drum and Bass oscuro y acelerado como lo es el neurophunk y el jump up con bajos potentes marcando su propio estilo.",
         downloadLink: "https://www.dropbox.com/scl/fo/7djshtbcq4bauzq6ms267/AH0wiJVQyOwLddYLjr0Q6CY/bdub?dl=0&rlkey=3a5qmnrlzp3dtt4jw7qb3o6ed&subfolder_nav_tracking=1",
@@ -64,6 +64,32 @@ En 2016 Mooncat lanza junto a Karlixx, Kursiva, Dubtime y Laura el sello de mús
     },
     {
         id: 6,
+        name: "Viewer",
+        image: "/assets/artists/viewer2.webp",
+        description: ` Viewer es un DJ y productor de drum and bass reconocido a
+    nivel mundial. Su música ha sido tocada por leyendas como LTJ
+    Bukem y London Elektricity, y ha colaborado con artistas
+    prominentes del género, como Scott Allen, Danny Wheeler,
+    mSdoS, FX909 y T.R.A.C.
+    Estas colaboraciones y el apoyo de figuras influyentes le han
+    abierto puertas en festivales como Locus Tulum, y sus temas
+    han sido presentados en BBC Radio 1, Rinse FM, KOOL FM y
+    Liquicity. Además, ha presentado un episodio en el podcast de
+    SUNANDBASS.
+    Sus sets, influenciados por el Liquid Funk y Soulful, capturan la
+    esencia del drum and bass con un toque de elegancia y
+    profundidad.
+    `,
+        video1: "...",
+        video2: "...",
+        downloadLink:"https://www.dropbox.com/scl/fi/tpnlsi9mbzkd5uyck8y47/Viewer-2024-Presskit-ESV5-1.pdf?rlkey=wgcvwuollv8gr2yr4uyqi9qk7&st=7m5hjvcy&dl=0",
+        instagramLink: "https://www.instagram.com/viewerdrumandbass?igsh=MWVrMzUxanUwNXZpbg==",
+        spotyfyLink:"https://open.spotify.com/artist/3brIpzYE3Tb7zxAPyaGjxj?si=qLj7cov4R5CvOFDoMvAbVw",
+        spotifyEmbed:"https://open.spotify.com/embed/artist/3brIpzYE3Tb7zxAPyaGjxj?utm_source=generator",
+        facebookLink: null
+    },
+    {
+        id: 7,
         name: "Darkho",
         image: "/assets/artists/Darkho.webp",
         description: "El representante más joven y uno de los mejores DJs de Drum&Bass/UKG en México. Además de un sonido único en sus producciones que en combinación con su destreza en las tornamesas, destacan en cada show y lo hace conectar increíble con la gente.",
@@ -74,7 +100,7 @@ En 2016 Mooncat lanza junto a Karlixx, Kursiva, Dubtime y Laura el sello de mús
         facebookLink: null
     },
     {
-        id: 7,
+        id: 8,
         name: "Jack Virgil",
         image: "/assets/artists/JV.webp",
         description: `
@@ -105,7 +131,7 @@ Jungle Cakes Takeover, EDC Mexico 2024 (invitado) y EDC Mexico 2025.`,
         youtubeLink: "https://www.youtube.com/@JackVirgilmusic"
     },
     {
-        id: 8,
+        id: 9,
         name: "Sirius Soundz",
         image: "/assets/artists/sirius.webp",
         description: `Selector musical y Emcee desde el 2013. Basado en Salamanca, Guanajuato.
@@ -121,12 +147,11 @@ Sound System Jamaicano a través de su conexión con el Reino Unido.`,
     },
 
         {
-        id: 9,
+        id: 10,
         name: "Ras Jahshua",
         image: "/assets/artists/Ras.webp",
         description:`Cantautor originario de Ciudad de México; Xochimilco
-con 1
-5 años de trayectoria en la escena nacional, ha
+con 15 años de trayectoria en la escena nacional, ha
 consolidado un estilo vocal personal que lo caracteriza y coloca
 como uno de los exponentes más fuertes dentro del género
 Reggae en México, hoy es talvez el único Deejay que
@@ -142,12 +167,12 @@ importar que sean Selectores o Live Acts, él va a detonar la
 pista de baile
 .`,
         
-
+        downloadLink: "https://www.dropbox.com/scl/fi/1ty8oh0mr97nd2yofcsaj/Ras-Jahshua-PK-2-1.pdf?rlkey=eo49sxf486ibwdxctx2bu1cqn&st=b2zgba08&dl=0",
         instagramLink: "https://www.instagram.com/rasjahshua/",
         facebookLink: "https://www.facebook.com/RasJahshua"
     },
     {
-        id: 10,
+        id: 11,
         name: "VJ BALA",
         image: "/assets/artists/VJBALA.webp",
         description: `Marina Mx (VJ BALA)
@@ -165,13 +190,13 @@ Practicante de Lengua de Señas Mexicana.`,
         facebookLink: null
     },
     {
-        id: 11,
+        id: 12,
         name: "Digital Ape Sound System",
         image: "/assets/artists/DigitalApeSoundSystem.webp",
-        description: "Primer Sound System de Drum And Bass/Jungle en México por LowFreqMx e Isaac Maya",
+        description: "Primer Sound System de Drum And Bass/Jungle en México por LowFreqMx e Isaac Maya. Con motivo de nuestro XVI aniversario, nos dimos a la titánica tarea de construir nuestro propio sistema de sonido, adecuándolo a las necesidades y exigencias que requiere el género. Enfocado al bass y las grandes presiones sonoras que se requieren para disfrutar de este estilo de música. Cuenta con más de 2 toneladas de equipo y cerca de 20.000 watts de potencia.",
         video1: "...",
         video2: "...",
-
+        downloadLink:"https://www.dropbox.com/scl/fi/tnvlep6rejpnnaff9vv3l/presentacion-DIGITAL-APE-1.pdf?rlkey=7ymxaw8niuggp9ume1dn5a6h9&st=raz3121q&dl=0",
         instagramLink: "https://www.instagram.com/digitalapess/",
         facebookLink: null
     },

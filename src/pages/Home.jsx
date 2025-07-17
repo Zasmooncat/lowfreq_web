@@ -72,13 +72,13 @@ const Home = () => {
     <>
       {/* Home */}
       <section id="home" className="relative">
-        <div>
-          <ImageCarousel images={images} interval={5000} />
+        <div className="shadow-[0_0_120px_rgba(0,0,0,1)] bg-black/70">
+          <ImageCarousel   images={images} interval={5000} />
         </div>
         <img
           src={logo}
           alt="logo"
-          className="absolute mt-5 top-5 w-40 sm:w-40 md:w-[300px] z-10 bg-transparent"
+          className="absolute  mt-5 top-5 w-40 sm:w-40 md:w-[300px] z-10 bg-transparent"
         />
       </section>
 
@@ -86,24 +86,25 @@ const Home = () => {
       <section
         id="artists"
         ref={artistsRef}
-        className="mx-auto bg-neutral-900/70 rounded-2xl"
+        className="mx-auto  rounded-2xl"
       >
         <div className="flex justify-center items-center mt-12">
           <h2 className="text-3xl my-4 font-bold italic uppercase text-white">Artistas</h2>
         </div>
-        <div className="w-11/12 md:w-10/12 mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-20">
+        <div className="w-11/12 md:w-10/13 mx-auto">
+          <div className="bg-linear-to-b from-neutral-900/50 to-neutral-900 rounded-2xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-20 p-8">
             {artistsInfo.map((artist) => (
               <div
                 key={artist.id}
                 onClick={() => handleClick(artist.id)}
-                className="cursor-pointer rounded-full p-4 shadow transition hover:scale-105"
+                className="cursor-pointer rounded-full p-4 shadow transition "
               >
                 <img
                   loading="lazy"
                   src={artist.image}
                   alt={artist.name}
-                  className="w-48 h-48 mx-auto rounded-full object-cover transform transition duration-300 filter saturate-60 hover:saturate-100"
+                  className="w-48 h-48 mx-auto rounded-full object-cover transform transition duration-300 filter saturate-60 hover:saturate-100 hover:scale-105 
+            hover:drop-shadow-[0_0_20px_rgba(200,200,250,0.2)]"
                 />
                 <h3 className="text-center text-white uppercase mt-4">{artist.name}</h3>
               </div>
@@ -141,38 +142,62 @@ const Home = () => {
       </section>
 
       {/* Modal Instagram */}
-      {isModalOpen && selectedEvent && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-md">
-          <div className="bg-black p-6 rounded-lg max-w-md w-full relative text-center">
-            <button
-              onClick={closeModal}
-              className="absolute top-2 right-4 text-white text-2xl font-bold"
-            >
-              &times;
-            </button>
-            <div className="text-white text-lg font-semibold italic mb-4">INSTAGRAM REELS</div>
-            <div
-              className="instagram-embed"
-              dangerouslySetInnerHTML={{
-                __html: `
-                <blockquote 
-                  class="instagram-media" 
-                  data-instgrm-permalink="${selectedEvent.igLink}" 
-                  data-instgrm-version="14" 
-                  style="background:#fff; border:0; margin: 0 auto; max-width:540px; width:100%;">
-                </blockquote>
-              `,
-              }}
-            />
-          </div>
-        </div>
-      )}
+{isModalOpen && selectedEvent && (
+  <div
+    className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm"
+    onClick={(e) => {
+      // Solo cerrar si se hace clic directamente en el fondo, no dentro del modal
+      if (e.target.id === "modal-backdrop") {
+        setIsModalOpen(false);
+        setSelectedEvent(null);
+      }
+    }}
+    id="modal-backdrop"
+  >
+    <div
+      className="bg-black p-6 rounded-lg max-w-md w-full relative text-center"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        onClick={() => {
+          setIsModalOpen(false);
+          setSelectedEvent(null);
+        }}
+        className="absolute top-2 right-4 text-white text-2xl font-bold z-10"
+      >
+        &times;
+      </button>
+      <div className="text-white text-lg font-semibold italic mb-4">INSTAGRAM REELS</div>
+      <div
+        className="instagram-embed"
+        dangerouslySetInnerHTML={{
+          __html: `
+            <blockquote 
+              class="instagram-media" 
+              data-instgrm-permalink="${selectedEvent.igLink}" 
+              data-instgrm-version="14" 
+              style="background:#fff; border:0; margin: 0 auto; max-width:540px; width:100%;">
+            </blockquote>
+          `,
+        }}
+      />
+    </div>
+  </div>
+)}
+
+
+
+
 
       {/* Contacto */}
-      <section id="contact" className="rounded-2xl bg-neutral-900/70 text-white p-5 mt-20">
+      <section id="contact" className="rounded-2xl text-white p-5 mt-20">
         <div className="flex flex-col items-center justify-center text-center space-y-6 w-full">
           <h2 className="text-3xl font-bold italic uppercase">Contacto</h2>
-          <p>Para cualquier duda o contratación, ponte en contacto con nosotros rellenando este formulario y te contestaremos lo antes posible.</p>
+          <div className="w-full md:w-2/4">
+
+          <p className="text-start"><strong>LOWFREQMX</strong>, Sello discográfico y plataforma multicultural que promueve la cultura del Drum and Bass y del Jungle en México. Soportado por los DJs más grandes de su género a nivel mundial, es un impulsor para talentos emergentes que necesitan un espacio en la escena local.</p>
+            <p className="text-start"> Para cualquier duda o contratación, ponte en contacto con nosotros rellenando este formulario y te contestaremos lo antes posible.</p>
+          </div>
           <div className="w-full flex justify-center">
             <div className="w-full md:w-2/4">
               <ContactForm />
