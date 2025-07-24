@@ -9,13 +9,13 @@ import events from "../utils/events";
 import { FaPlay } from 'react-icons/fa';
 
 const images = [
-  "src/imagenes/carousel/1.webp",
-  "src/imagenes/carousel/2.webp",
-  "src/imagenes/carousel/3.webp",
-  "src/imagenes/carousel/4.webp",
-  "src/imagenes/carousel/5.webp",
-  "src/imagenes/carousel/6.webp",
-  "src/imagenes/carousel/7.webp",
+  "/assets/imagenes/carousel/1.webp",
+  "/assets/imagenes/carousel/2.webp",
+  "/assets/imagenes/carousel/3.webp",
+  "/assets/imagenes/carousel/4.webp",
+  "/assets/imagenes/carousel/5.webp",
+  "/assets/imagenes/carousel/6.webp",
+  "/assets/imagenes/carousel/7.webp",
 ];
 
 const Home = () => {
