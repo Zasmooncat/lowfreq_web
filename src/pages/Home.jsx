@@ -79,6 +79,7 @@ const Home = () => {
           src={logo}
           alt="logo"
           className="absolute  mt-5 top-5 w-40 sm:w-40 md:w-[300px] z-10 bg-transparent"
+          loading="lazy"
         />
       </section>
 
@@ -204,7 +205,7 @@ const Home = () => {
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <img className="w-20 h-20" src={logoLow} alt="Lowfreq Logo" />
+            <img className="w-20 h-20" src={logoLow} alt="Lowfreq Logo" loading="lazy" />
             <p className="mt-2 text-xs">LOWFREQMX®</p>
           </div>
         </div>

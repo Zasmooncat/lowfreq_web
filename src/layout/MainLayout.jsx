@@ -9,7 +9,7 @@ const MainLayout = () => {
       <img
         loading="lazy"
         className="fixed top-0 left-0 w-full h-full object-cover z-[-2]"
-        src="/assets/imagenes/fondo/FondoTexturaLFQ.png"
+        src="/assets/imagenes/fondo/FondoTexturaLFQ.webp"
         
       />
 
