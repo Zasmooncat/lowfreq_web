@@ -50,7 +50,7 @@ const Navbar = () => {
           <li onClick={() => handleNavigation("artists")} className="cursor-pointer uppercase italic hover:text-gray-400">Artistas</li>
           <li onClick={() => handleNavigation("eventos")} className="cursor-pointer uppercase italic hover:text-gray-400">Eventos</li>
           <li>
-            <a href="https://www.beatport.com/es/label/lowfreqmx/28822" className="uppercase italic hover:text-green-400" target="_blank" rel="noopener noreferrer">
+            <a href="https://lowfreqmx.bandcamp.com/" className="uppercase italic hover:text-green-400" target="_blank" rel="noopener noreferrer">
               Música
             </a>
           </li>

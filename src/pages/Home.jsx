@@ -197,7 +197,7 @@ const Home = () => {
           <div className="w-full md:w-2/4">
 
           <p className="text-start"><strong>LOWFREQMX</strong>, Sello discográfico y plataforma multicultural que promueve la cultura del Drum and Bass y del Jungle en México. Soportado por los DJs más grandes de su género a nivel mundial, es un impulsor para talentos emergentes que necesitan un espacio en la escena local.</p>
-            <p className="text-start"> Para cualquier duda o contratación, ponte en contacto con nosotros rellenando este formulario y te contestaremos lo antes posible.</p>
+            <p className="text-start"> Información y contrataciones.</p>
           </div>
           <div className="w-full flex justify-center">
             <div className="w-full md:w-2/4">
