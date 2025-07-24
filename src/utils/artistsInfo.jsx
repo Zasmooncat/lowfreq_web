@@ -96,6 +96,8 @@ En 2016 Mooncat lanza junto a Karlixx, Kursiva, Dubtime y Laura el sello de mús
         downloadLink: "https://www.dropbox.com/scl/fo/s6z8mvtgkgawe2px0dd5g/APCPY_Kc1cWlt4lZ1MSUNms?rlkey=hrv9qhtyn75pz2d2gbjo09sa6&e=1&st=od03h6qo&dl=0",
         video1: "...",
         video2: "...",
+        spotyfyLink: "https://open.spotify.com/intl-es/artist/3UG1Fvt3jr7RzK11dNWiuZ?si=MugPgaL8RHax8acwQyS11g&nd=1&dlsi=3b48b0524de54d95",
+        spotifyEmbed:"https://open.spotify.com/embed/artist/3UG1Fvt3jr7RzK11dNWiuZ?utm_source=generator",
         instagramLink: "https://www.instagram.com/darkho.dnb/",
         facebookLink: null
     },
@@ -169,7 +171,9 @@ pista de baile
         
         downloadLink: "https://www.dropbox.com/scl/fi/1ty8oh0mr97nd2yofcsaj/Ras-Jahshua-PK-2-1.pdf?rlkey=eo49sxf486ibwdxctx2bu1cqn&st=b2zgba08&dl=0",
         instagramLink: "https://www.instagram.com/rasjahshua/",
-        facebookLink: "https://www.facebook.com/RasJahshua"
+        facebookLink: "https://www.facebook.com/RasJahshua",
+        spotifyEmbed:"https://open.spotify.com/embed/artist/69tTGKazNr7p4qdIoEKLrM?utm_source=generator",
+        spotyfyLink:"https://open.spotify.com/intl-es/artist/69tTGKazNr7p4qdIoEKLrM?si=fpqqiUDwSdimf14qsHRNgw&nd=1&dlsi=5c760ccd1e804daf"
     },
     {
         id: 11,
