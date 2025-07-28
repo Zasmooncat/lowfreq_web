@@ -70,7 +70,7 @@ const Navbar = () => {
           <li onClick={() => handleNavigation("artists")}>Artistas</li>
           <li onClick={() => handleNavigation("eventos")}>Eventos</li>
           <li>
-            <a href="https://www.beatport.com/es/label/lowfreqmx/28822">Música</a>
+            <a href="https://lowfreqmx.bandcamp.com/">Música</a>
           </li>
           <li onClick={() => handleNavigation("contact")}>Contacto</li>
           <li>
