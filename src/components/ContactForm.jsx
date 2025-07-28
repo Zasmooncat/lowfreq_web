@@ -15,7 +15,7 @@ const ContactForm = () => {
     const data = new FormData(form);
 
     try {
-      await fetch("https://formsubmit.co/ajax/zasmomoxipol@gmail.com", {
+      await fetch("https://formsubmit.co/ajax/mayaisaac@gmail.com", {
         method: "POST",
         headers: {
           Accept: "application/json",
