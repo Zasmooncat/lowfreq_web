@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { FaInstagram, FaSpotify, FaFacebook, FaYoutube, FaBandcamp } from 'react-icons/fa';
+import { FaInstagram, FaSpotify, FaFacebook, FaBandcamp } from 'react-icons/fa';
 import artistsInfo from '../utils/artistsInfo';
 import logo from "../imagenes/logos/lowfreq_logo_v.png";
 import logoLow from "../imagenes/logos/lowfreqlogoinv.png";
@@ -36,17 +36,6 @@ const ArtistProfile = () => {
       window.history.back();
     }
   };
-
-  const getYoutubeEmbedUrl = (url) => {
-    if (!url) return null;
-    const videoIdMatch = url.match(/v=([^&]+)/);
-    return videoIdMatch ? `https://www.youtube.com/embed/${videoIdMatch[1]}` : null;
-  };
-
-  const youtubeVideos = [
-    getYoutubeEmbedUrl(artist?.video1),
-    getYoutubeEmbedUrl(artist?.video2),
-  ].filter(Boolean);
 
   if (!artist) {
     return <p className="text-center text-white">Artista no encontrado.</p>;
@@ -108,11 +97,14 @@ const ArtistProfile = () => {
         >
           CONTRATAR
         </button>
-        <a href={artist.downloadLink} download target="_blank" rel="noopener noreferrer">
-          <button className="boton-elegante mx-auto flex flex-col sm:flex-row gap-4 justify-center m-2">
-            PRESSKIT
-          </button>
-        </a>
+
+        {artist.downloadLink && (
+          <a href={artist.downloadLink} download target="_blank" rel="noopener noreferrer">
+            <button className="boton-elegante mx-auto flex flex-col sm:flex-row gap-4 justify-center m-2">
+              PRESSKIT
+            </button>
+          </a>
+        )}
       </section>
 
       {artist.spotifyEmbed && (
@@ -129,26 +121,6 @@ const ArtistProfile = () => {
               className="rounded-xl max-w-xl"
               title="Spotify Player"
             ></iframe>
-          </div>
-        </section>
-      )}
-
-      {youtubeVideos.length > 0 && (
-        <section>
-          <h2 className="text-xl font-semibold mb-4">Videos</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {youtubeVideos.map((url, index) => (
-              <iframe
-                key={index}
-                width="100%"
-                height="200"
-                src={url}
-                title={`YouTube video ${index + 1}`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            ))}
           </div>
         </section>
       )}

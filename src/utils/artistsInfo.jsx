@@ -12,8 +12,44 @@ const artistsInfo = [
         instagramLink: "https://www.instagram.com/isaacmayamx/",
         facebookLink: null
     },
+
+
     {
         id: 2,
+        name: "Tyke",
+        image: "/assets/imagenes/artists/Tyke.webp",
+        description: `Rebelde en todos los sentidos, sus raíces grafiteras sentaron las bases de un referente del drum & bass. 
+        Desde la red ferroviaria de Londres hasta la vanguardia de la escena, su estilo es agudo, 
+        vibrante e implacable. Firmado por Playaz, Grid Recordings y creador de Paradigm Music, 
+        la influencia de Tyke es inigualable. 
+        Con el apoyo inicial de leyendas como Andy C, sus temas pegan fuerte y profundo, impulsados por su pasión por los equipos analógicos. 
+        Conocido por sus álter egos juguetones y temas como "Infected Headphones", Noisia lo ha aclamado como el Padrino de la Sirena de Niebla. 
+        Con un don para éxitos atemporales como "Mind Games" y el apoyo incondicional de los mejores DJs de todo el mundo, 
+        Tyke está listo para dominar el mundo del drum & bass durante años.`,
+        downloadLink: null,
+        spotifyEmbed: "https://open.spotify.com/embed/artist/1sGQzK4pvwC2HF08W9feT8?utm_source=generator",
+        spotyfyLink: "https://open.spotify.com/intl-es/artist/1sGQzK4pvwC2HF08W9feT8?si=5SMg6fEoQWGgZvyIx6DZ8g",
+        instagramLink: "https://www.instagram.com/tyke_playaz/",
+        bandcampLink:null
+    },
+
+
+    {
+        id: 3,
+        name: "Dutta",
+        image: "/assets/imagenes/artists/Dutta.webp",
+        description: `Tras ser mencionado en la edición de 2019 de UKF como uno de los nombres más destacados de la nueva generación de productores de Jump Up, que han impulsado el sonido hacia el mainstream, la carrera de Dutta comenzó a tomar forma. Con el apoyo de las figuras más influyentes de la escena drum and bass, Dutta se consolida como un artista imprescindible para eventos en todo el mundo.`,
+        downloadLink: null,
+        spotifyEmbed: "https://open.spotify.com/embed/artist/10yIHb1NneKSlfeCoHtGwk?utm_source=generator",
+        spotyfyLink: "https://open.spotify.com/intl-es/artist/10yIHb1NneKSlfeCoHtGwk?si=zwDhSdtzTUSaTGoOMyx0yA",
+        instagramLink: "https://www.instagram.com/dutta_uk/",
+        
+    },
+
+
+
+    {
+        id: 4,
         name: "Mooncat",
         image: "/assets/imagenes/artists/mooncat_blue.webp",
         description: `Dj/productor valenciano destacado por ser uno de los máximos exponentes dentro de la escena drum&bass nacional, con un estilo único e inconfundible tanto en sus producciones como en sus sets. 
@@ -25,21 +61,39 @@ En 2016 Mooncat lanza junto a Karlixx, Kursiva, Dubtime y Laura el sello de mús
         instagramLink: "https://www.instagram.com/zasmooncat/",
         bandcampLink: "https://mooncatdnb.bandcamp.com/"
     },
+
+
     {
-        id: 3,
-        name: "8pril",
-        image: "/assets/imagenes/artists/8pril.webp",
-        description: "8PRIL es una Dj de Drum and Bass mexicana que destaca en la escena por su capturante selección musical con un mezcla muy impecable que la ha llevado a colaborar en presentaciones con grandes pioneros del género.",
-        downloadLink: "https://www.dropbox.com/scl/fi/qyozd6bf13zd5y9rnrnmr/Presskit-8PRIL.pdf?rlkey=6cx2hwkrvr4e878govtrlnvyd&e=1&st=2roqbb8j&dl=0",
-
-        video1: "...",
-        video2: "...",
-
-        instagramLink: "https://www.instagram.com/8prilmx/",
-        facebookLink: null
+        id: 5,
+        name: "Kursiva",
+        image: "/assets/imagenes/artists/Kursiva.webp",
+        description: `Dj y Prouctor con sede en Córdoba, España, Kursiva ha sido reconocido en una amplia gama de géneros musicales que crea en el estudio y toca en el escenario. Ritmos potentes y mezclas sólidas, trabajadas con la precisión de un cirujano de neurofunk, se combinan con elementos clásicos del reggae y el hip-hop para crear un sonido característico presente en todas sus producciones, independientemente del tipo de música bass: Jungle, Drum & Bass o Neurofunk.
+Tras explorar la escena en los últimos años, 2018 parece ser el punto de partida para encontrar su propio sonido característico. Con un buen puñado de lanzamientos a punto de salir este año, la carrera de este joven productor está creciendo rápidamente.`,
+        downloadLink: null,
+        spotifyEmbed: "https://open.spotify.com/embed/artist/1DMvj4SEEjbBdszYfv2yoY?utm_source=generator",
+        spotyfyLink: "https://open.spotify.com/intl-es/artist/1DMvj4SEEjbBdszYfv2yoY?si=l5NgsZ64TgiC1bS__jtM-Q",
+        instagramLink: "https://www.instagram.com/kursiva_music/",
+        bandcampLink: "https://mooncatdnb.bandcamp.com/"
     },
+
+
     {
-        id: 4,
+        id: 6,
+        name: "Dunk",
+        image: "/assets/imagenes/artists/Dunk.webp",
+        description: `Maestro del sonido minimalista. Una potencia increíble. Y una pegada brutal en cada producción. El paulista Dunk se basa constantemente en estos tres atributos para ofrecer un drum & bass de calidad que supera los límites de los sistemas de sonido de todo el mundo: una fuente fiable para DJs que cargan sus memorias USB o para oyentes que buscan algo para enriquecer su lista de reproducción.
+
+En cualquier momento, es probable que encuentres un tema de Dunk en la sección de nuevos lanzamientos de tu tienda de discos favorita, lo que resalta el flujo constante de ritmos de uno de los talentos más dedicados de Brasil.`,
+        downloadLink: null,
+        spotifyEmbed: "https://open.spotify.com/embed/artist/3to9W3JX4kSmj4TEGlKiDS?utm_source=generator",
+        spotyfyLink: "https://open.spotify.com/intl-es/artist/3to9W3JX4kSmj4TEGlKiDS?si=tzDrX8zqRXqXODKf-hWNFA",
+        instagramLink: "https://www.instagram.com/zasmooncat/",
+        bandcampLink: "https://mooncatdnb.bandcamp.com/"
+    },
+
+
+    {
+        id: 7,
         name: "Aiokai",
         image: "/assets/imagenes/artists/Aiokai.webp",
         description: "Aiokai is a versatile drum & bass producer drawing from rave and bass music influences. His sound ranges from heavy neuro tracks like Hell Is Repetition (A Records) to high-energy jump-up bangers like Blue Eyes with Jack Virgil, and smooth liquid cuts like Take Me (4NC¥ // DarkMode). Known for his dynamic style and distinct identity, Aiokai moves seamlessly between moods without losing his signature touch.He has performed at major festivals including EDC Mexico (2023, 2024) and Locus Tulum 2022, as well as in countries like Italy, Germany, Croatia, and Colombia. As part of Mexico’s rising bass scene, Aiokai is affiliated with Jessica Audiffred’s A Records and Isaac Maya’s LOWFREQMX. He also runs IX Recorders, a label focused on forward-thinking and genre-pushing bass music.",
@@ -51,19 +105,10 @@ En 2016 Mooncat lanza junto a Karlixx, Kursiva, Dubtime y Laura el sello de mús
         instagramLink: "https://www.instagram.com/aiokaidnb/",
         facebookLink: "https://www.facebook.com/aiokai.dnb"
     },
+
+
     {
-        id: 5,
-        name: "B-Dub",
-        image: "/assets/imagenes/artists/b-dub.webp",
-        description: "DJ Originario del estado de Mexico, inicia su carrera en 2008 inspirado siempre por el Dnb y pasando por otros generos (Moombahton, Dubstep, Trap) tomando como base de su estilo la linea de bajo, hoy en dia siendo parte de Low Freq con un Drum and Bass oscuro y acelerado como lo es el neurophunk y el jump up con bajos potentes marcando su propio estilo.",
-        downloadLink: "https://www.dropbox.com/scl/fo/7djshtbcq4bauzq6ms267/AH0wiJVQyOwLddYLjr0Q6CY/bdub?dl=0&rlkey=3a5qmnrlzp3dtt4jw7qb3o6ed&subfolder_nav_tracking=1",
-        video1: "...",
-        video2: "...",
-        instagramLink: "https://www.instagram.com/miguel.bdub/",
-        facebookLink: "https://www.facebook.com/b.dub.aka.askeroso.krw"
-    },
-    {
-        id: 6,
+        id: 8,
         name: "Viewer",
         image: "/assets/imagenes/artists/viewer2.webp",
         description: ` Viewer es un DJ y productor de drum and bass reconocido a
@@ -78,18 +123,19 @@ En 2016 Mooncat lanza junto a Karlixx, Kursiva, Dubtime y Laura el sello de mús
     SUNANDBASS.
     Sus sets, influenciados por el Liquid Funk y Soulful, capturan la
     esencia del drum and bass con un toque de elegancia y
-    profundidad.
-    `,
+    profundidad.`,
         video1: "...",
         video2: "...",
-        downloadLink:"https://www.dropbox.com/scl/fi/tpnlsi9mbzkd5uyck8y47/Viewer-2024-Presskit-ESV5-1.pdf?rlkey=wgcvwuollv8gr2yr4uyqi9qk7&st=7m5hjvcy&dl=0",
+        downloadLink: "https://www.dropbox.com/scl/fi/tpnlsi9mbzkd5uyck8y47/Viewer-2024-Presskit-ESV5-1.pdf?rlkey=wgcvwuollv8gr2yr4uyqi9qk7&st=7m5hjvcy&dl=0",
         instagramLink: "https://www.instagram.com/viewerdrumandbass?igsh=MWVrMzUxanUwNXZpbg==",
-        spotyfyLink:"https://open.spotify.com/artist/3brIpzYE3Tb7zxAPyaGjxj?si=qLj7cov4R5CvOFDoMvAbVw",
-        spotifyEmbed:"https://open.spotify.com/embed/artist/3brIpzYE3Tb7zxAPyaGjxj?utm_source=generator",
+        spotyfyLink: "https://open.spotify.com/artist/3brIpzYE3Tb7zxAPyaGjxj?si=qLj7cov4R5CvOFDoMvAbVw",
+        spotifyEmbed: "https://open.spotify.com/embed/artist/3brIpzYE3Tb7zxAPyaGjxj?utm_source=generator",
         facebookLink: null
     },
+
+
     {
-        id: 7,
+        id: 9,
         name: "Darkho",
         image: "/assets/imagenes/artists/Darkho.webp",
         description: "El representante más joven y uno de los mejores DJs de Drum&Bass/UKG en México. Además de un sonido único en sus producciones que en combinación con su destreza en las tornamesas, destacan en cada show y lo hace conectar increíble con la gente.",
@@ -97,12 +143,14 @@ En 2016 Mooncat lanza junto a Karlixx, Kursiva, Dubtime y Laura el sello de mús
         video1: "...",
         video2: "...",
         spotyfyLink: "https://open.spotify.com/intl-es/artist/3UG1Fvt3jr7RzK11dNWiuZ?si=MugPgaL8RHax8acwQyS11g&nd=1&dlsi=3b48b0524de54d95",
-        spotifyEmbed:"https://open.spotify.com/embed/artist/3UG1Fvt3jr7RzK11dNWiuZ?utm_source=generator",
+        spotifyEmbed: "https://open.spotify.com/embed/artist/3UG1Fvt3jr7RzK11dNWiuZ?utm_source=generator",
         instagramLink: "https://www.instagram.com/darkho.dnb/",
         facebookLink: null
     },
+
+
     {
-        id: 8,
+        id: 10,
         name: "Jack Virgil",
         image: "/assets/imagenes/artists/JV.webp",
         description: `
@@ -116,12 +164,8 @@ México, Jack Virgil se ha ganado un lugar en la escena musical firmando en gran
 disqueras nacionales e internacionales como: A Records, Monta Records y IX
 Recorders; comp
 artiendo escenarios con renombrados artistas nacionales e
-internacionales como: Phase One, Ghengar, HE$H, Isaac Maya, Ed Solo, G
--
-Shellz,
-Aiokai, Ambroz, Keel, Deafny y Tyke.
-Jack Virgil ha tenido participacion en eventos y festivales como Mad House: Asylu
-m,
+internacionales como: Phase One, Ghengar, HE$H, Isaac Maya, Ed Solo, G-Shellz, Aiokai, Ambroz, Keel, Deafny y Tyke.
+Jack Virgil ha tenido participacion en eventos y festivales como Mad House: Asylum,
 Jungle Cakes Takeover, EDC Mexico 2024 (invitado) y EDC Mexico 2025.`,
         downloadLink: "https://www.dropbox.com/scl/fo/7djshtbcq4bauzq6ms267/AGHeTWPRfKUc2tuUA-UU6VE/JACK%20VIRGIL/PRESSKIT?dl=0&preview=PK+Jack+Virgil+2025.pdf&rlkey=3a5qmnrlzp3dtt4jw7qb3o6ed&subfolder_nav_tracking=1",
         video1: "...",
@@ -132,8 +176,10 @@ Jungle Cakes Takeover, EDC Mexico 2024 (invitado) y EDC Mexico 2025.`,
         spotifyEmbed: "https://open.spotify.com/embed/artist/14ue0rFM1Q8ommRtE8klMD?utm_source=generator",
         youtubeLink: "https://www.youtube.com/@JackVirgilmusic"
     },
+
+
     {
-        id: 9,
+        id: 11,
         name: "Sirius Soundz",
         image: "/assets/imagenes/artists/sirius.webp",
         description: `Selector musical y Emcee desde el 2013. Basado en Salamanca, Guanajuato.
@@ -148,11 +194,11 @@ Sound System Jamaicano a través de su conexión con el Reino Unido.`,
         facebookLink: null,
     },
 
-        {
-        id: 10,
+    {
+        id: 12,
         name: "Ras Jahshua",
         image: "/assets/imagenes/artists/Ras.webp",
-        description:`Cantautor originario de Ciudad de México; Xochimilco
+        description: `Cantautor originario de Ciudad de México; Xochimilco
 con 15 años de trayectoria en la escena nacional, ha
 consolidado un estilo vocal personal que lo caracteriza y coloca
 como uno de los exponentes más fuertes dentro del género
@@ -168,15 +214,32 @@ conecte con él; sesiones de Sound System sin
 importar que sean Selectores o Live Acts, él va a detonar la
 pista de baile
 .`,
-        
+
         downloadLink: "https://www.dropbox.com/scl/fi/1ty8oh0mr97nd2yofcsaj/Ras-Jahshua-PK-2-1.pdf?rlkey=eo49sxf486ibwdxctx2bu1cqn&st=b2zgba08&dl=0",
         instagramLink: "https://www.instagram.com/rasjahshua/",
         facebookLink: "https://www.facebook.com/RasJahshua",
-        spotifyEmbed:"https://open.spotify.com/embed/artist/69tTGKazNr7p4qdIoEKLrM?utm_source=generator",
-        spotyfyLink:"https://open.spotify.com/intl-es/artist/69tTGKazNr7p4qdIoEKLrM?si=fpqqiUDwSdimf14qsHRNgw&nd=1&dlsi=5c760ccd1e804daf"
+        spotifyEmbed: "https://open.spotify.com/embed/artist/69tTGKazNr7p4qdIoEKLrM?utm_source=generator",
+        spotyfyLink: "https://open.spotify.com/intl-es/artist/69tTGKazNr7p4qdIoEKLrM?si=fpqqiUDwSdimf14qsHRNgw&nd=1&dlsi=5c760ccd1e804daf"
     },
+
+
     {
-        id: 11,
+        id: 13,
+        name: "8pril",
+        image: "/assets/imagenes/artists/8pril.webp",
+        description: "8PRIL es una Dj de Drum and Bass mexicana que destaca en la escena por su capturante selección musical con un mezcla muy impecable que la ha llevado a colaborar en presentaciones con grandes pioneros del género.",
+        downloadLink: "https://www.dropbox.com/scl/fi/qyozd6bf13zd5y9rnrnmr/Presskit-8PRIL.pdf?rlkey=6cx2hwkrvr4e878govtrlnvyd&e=1&st=2roqbb8j&dl=0",
+
+        video1: "...",
+        video2: "...",
+
+        instagramLink: "https://www.instagram.com/8prilmx/",
+        facebookLink: null
+    },
+
+
+    {
+        id: 14,
         name: "VJ BALA",
         image: "/assets/imagenes/artists/VJBALA.webp",
         description: `Marina Mx (VJ BALA)
@@ -193,14 +256,29 @@ Practicante de Lengua de Señas Mexicana.`,
         instagramLink: "https://www.instagram.com/marina.mx/",
         facebookLink: null
     },
+
+
     {
-        id: 12,
+        id: 15,
+        name: "B-Dub",
+        image: "/assets/imagenes/artists/b-dub.webp",
+        description: "DJ Originario del estado de Mexico, inicia su carrera en 2008 inspirado siempre por el Dnb y pasando por otros generos (Moombahton, Dubstep, Trap) tomando como base de su estilo la linea de bajo, hoy en dia siendo parte de Low Freq con un Drum and Bass oscuro y acelerado como lo es el neurophunk y el jump up con bajos potentes marcando su propio estilo.",
+        downloadLink: "https://www.dropbox.com/scl/fo/7djshtbcq4bauzq6ms267/AH0wiJVQyOwLddYLjr0Q6CY/bdub?dl=0&rlkey=3a5qmnrlzp3dtt4jw7qb3o6ed&subfolder_nav_tracking=1",
+        video1: "...",
+        video2: "...",
+        instagramLink: "https://www.instagram.com/miguel.bdub/",
+        facebookLink: "https://www.facebook.com/b.dub.aka.askeroso.krw"
+    },
+
+
+    {
+        id: 16,
         name: "Digital Ape Sound System",
         image: "/assets/imagenes/artists/DigitalApeSoundSystem.webp",
         description: "Primer Sound System de Drum And Bass/Jungle en México por LowFreqMx e Isaac Maya. Con motivo de nuestro XVI aniversario, nos dimos a la titánica tarea de construir nuestro propio sistema de sonido, adecuándolo a las necesidades y exigencias que requiere el género. Enfocado al bass y las grandes presiones sonoras que se requieren para disfrutar de este estilo de música. Cuenta con más de 2 toneladas de equipo y cerca de 20.000 watts de potencia.",
         video1: "...",
         video2: "...",
-        downloadLink:"https://www.dropbox.com/scl/fi/tnvlep6rejpnnaff9vv3l/presentacion-DIGITAL-APE-1.pdf?rlkey=7ymxaw8niuggp9ume1dn5a6h9&st=raz3121q&dl=0",
+        downloadLink: "https://www.dropbox.com/scl/fi/tnvlep6rejpnnaff9vv3l/presentacion-DIGITAL-APE-1.pdf?rlkey=7ymxaw8niuggp9ume1dn5a6h9&st=raz3121q&dl=0",
         instagramLink: "https://www.instagram.com/digitalapess/",
         facebookLink: null
     },
