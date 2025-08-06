@@ -73,7 +73,7 @@ Tras explorar la escena en los últimos años, 2018 parece ser el punto de parti
         spotifyEmbed: "https://open.spotify.com/embed/artist/1DMvj4SEEjbBdszYfv2yoY?utm_source=generator",
         spotyfyLink: "https://open.spotify.com/intl-es/artist/1DMvj4SEEjbBdszYfv2yoY?si=l5NgsZ64TgiC1bS__jtM-Q",
         instagramLink: "https://www.instagram.com/kursiva_music/",
-        bandcampLink: "https://mooncatdnb.bandcamp.com/"
+        
     },
 
 
@@ -88,7 +88,7 @@ En cualquier momento, es probable que encuentres un tema de Dunk en la sección 
         spotifyEmbed: "https://open.spotify.com/embed/artist/3to9W3JX4kSmj4TEGlKiDS?utm_source=generator",
         spotyfyLink: "https://open.spotify.com/intl-es/artist/3to9W3JX4kSmj4TEGlKiDS?si=tzDrX8zqRXqXODKf-hWNFA",
         instagramLink: "https://www.instagram.com/zasmooncat/",
-        bandcampLink: "https://mooncatdnb.bandcamp.com/"
+        
     },
 
 
@@ -174,7 +174,7 @@ Jungle Cakes Takeover, EDC Mexico 2024 (invitado) y EDC Mexico 2025.`,
         facebookLink: "https://www.facebook.com/people/Jack-Virgil/61552005825414/",
         spotyfyLink: "https://open.spotify.com/intl-es/artist/14ue0rFM1Q8ommRtE8klMD",
         spotifyEmbed: "https://open.spotify.com/embed/artist/14ue0rFM1Q8ommRtE8klMD?utm_source=generator",
-        youtubeLink: "https://www.youtube.com/@JackVirgilmusic"
+        
     },
 
 
