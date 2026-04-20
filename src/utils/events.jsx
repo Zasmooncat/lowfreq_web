@@ -1,5 +1,10 @@
 const events = [
   {
+    id: 9,
+    image: "/assets/imagenes/eventos/9dubtojungle.jpg",
+    igLink: "https://www.instagram.com/reel/DTRGOtfkm37/?igsh=cTdvcGE2MHlwOTF0",
+  },
+  {
     id: 1,
     image: "/assets/imagenes/eventos/1ronisize.webp",
     igLink: "https://www.instagram.com/p/DJ5gc0URu5g/",
@@ -37,7 +42,7 @@ const events = [
     igLink: "https://www.instagram.com/reel/ChXpeBHpLe7/",
   },
 
-   {
+  {
     id: 8,
     image: "/assets/imagenes/eventos/8vinyl.webp",
     igLink: "https://www.instagram.com/reel/DAqtTTtJoRb/",

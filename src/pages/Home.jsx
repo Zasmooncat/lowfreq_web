@@ -7,6 +7,7 @@ import ContactForm from "../components/ContactForm";
 import artistsInfo from "../utils/artistsInfo";
 import events from "../utils/events";
 import { FaPlay } from 'react-icons/fa';
+import EventModal from "../components/EventModal";
 
 const images = [
   "/assets/imagenes/carousel/1.webp",
@@ -31,42 +32,12 @@ const Home = () => {
   const openModal = (event) => {
     setSelectedEvent(event);
     setIsModalOpen(true);
-    window.history.pushState({ modal: true }, "");
   };
 
   const closeModal = () => {
     setSelectedEvent(null);
     setIsModalOpen(false);
-    if (window.history.state?.modal) {
-      window.history.back();
-    }
   };
-
-  useEffect(() => {
-    if (!selectedEvent) return;
-
-    if (!window.instgrm) {
-      const script = document.createElement("script");
-      script.src = "https://www.instagram.com/embed.js";
-      script.async = true;
-      script.onload = () => window.instgrm?.Embeds.process();
-      document.body.appendChild(script);
-    } else {
-      window.instgrm.Embeds.process();
-    }
-  }, [selectedEvent]);
-
-  useEffect(() => {
-    const handlePopState = () => {
-      if (isModalOpen) {
-        setSelectedEvent(null);
-        setIsModalOpen(false);
-      }
-    };
-
-    window.addEventListener("popstate", handlePopState);
-    return () => window.removeEventListener("popstate", handlePopState);
-  }, [isModalOpen]);
 
   return (
     <>
@@ -87,27 +58,44 @@ const Home = () => {
       <section
         id="artists"
         ref={artistsRef}
-        className="mx-auto  rounded-2xl"
+        className="w-full relative py-20 overflow-hidden"
       >
-        <div className="flex justify-center items-center mt-12">
-          <h2 className="text-3xl my-4 font-bold italic uppercase text-white">Artistas</h2>
+        {/* Glow abstracto de fondo */}
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-4/5 h-40 bg-zinc-700/20 blur-[120px] pointer-events-none rounded-full"></div>
+        
+        <div className="flex justify-center items-center mb-12 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-extrabold italic uppercase tracking-widest text-white drop-shadow-lg">
+            Artistas
+          </h2>
         </div>
-        <div className="w-11/12 md:w-10/13 mx-auto">
-          <div className="bg-linear-to-b from-neutral-900/50 to-neutral-900 rounded-2xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-20 p-8">
+
+        <div className="w-11/12 md:max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 pb-20">
             {artistsInfo.map((artist) => (
               <div
                 key={artist.id}
                 onClick={() => handleClick(artist.id)}
-                className="cursor-pointer rounded-full p-4 shadow transition "
+                className="group relative cursor-pointer rounded-2xl overflow-hidden bg-neutral-950 border border-neutral-800/80 transition-all duration-500 hover:border-neutral-500/50 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] hover:-translate-y-2"
               >
-                <img
-                  loading="lazy"
-                  src={artist.image}
-                  alt={artist.name}
-                  className="w-48 h-48 mx-auto rounded-full object-cover transform transition duration-300 filter saturate-60 hover:saturate-100 hover:scale-105 
-            hover:drop-shadow-[0_0_20px_rgba(200,200,250,0.2)]"
-                />
-                <h3 className="text-center text-white uppercase mt-4">{artist.name}</h3>
+                <div className="aspect-square w-full overflow-hidden relative">
+                  <img
+                    loading="lazy"
+                    src={artist.image}
+                    alt={artist.name}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                  />
+                  {/* Gradiente sutil solo abajo para dar lectura al nombre, sin opacar la foto entera */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-75"></div>
+                </div>
+                
+                <div className="absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end">
+                  <div className="translate-y-2 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                    <h3 className="text-2xl font-bold text-white uppercase tracking-wide group-hover:text-neutral-300 transition-colors duration-300">
+                      {artist.name}
+                    </h3>
+                    <div className="h-0.5 w-0 bg-white mt-3 transition-all duration-700 ease-out group-hover:w-1/3"></div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -118,96 +106,91 @@ const Home = () => {
       <section
         id="eventos"
         ref={eventsRef}
-        className="w-11/12 md:w-4/5 mx-auto"
+        className="w-full relative py-20 bg-neutral-950/40"
       >
-        <h2 className="text-3xl font-bold italic text-center text-white uppercase mb-8 tracking-wide">
-          Eventos
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {events.map((event) => (
-            <div
-              key={event.id}
-              onClick={() => openModal(event)}
-              className="bg-black relative overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition"
-            >
-              <FaPlay className="text-white text-6xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-70 hover:opacity-100 hover:text-green-500 transition" />
-              <img
-                loading="lazy"
-                src={event.image}
-                alt={`Evento ${event.id}`}
-                className="w-full h-64 object-cover"
-              />
-            </div>
-          ))}
+        <div className="flex justify-center items-center mb-16 relative z-10 w-full">
+          <h2 className="text-4xl md:text-5xl font-extrabold italic uppercase tracking-widest text-white drop-shadow-lg">
+            Eventos
+          </h2>
+        </div>
+        
+        <div className="w-11/12 md:max-w-7xl mx-auto relative z-10 pb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {events.map((event) => (
+              <div
+                key={event.id}
+                onClick={() => openModal(event)}
+                className="group relative overflow-hidden rounded-2xl shadow-xl cursor-pointer transition-all duration-500 hover:shadow-[0_0_30px_rgba(34,197,94,0.15)] hover:-translate-y-2 border border-white/5 bg-black"
+              >
+                <div className="aspect-[4/5] w-full overflow-hidden relative">
+                  <img
+                    loading="lazy"
+                    src={event.image}
+                    alt={`Evento ${event.id}`}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 filter brightness-90 group-hover:brightness-110"
+                  />
+                  {/* Subtle dark gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-500"></div>
+                  
+                  {/* Glassmorphic Play Button */}
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div className="bg-black/30 backdrop-blur-md p-5 rounded-full border border-white/10 group-hover:border-green-500/50 group-hover:bg-black/50 transition-all duration-500 transform scale-90 group-hover:scale-110 ease-out shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+                      <FaPlay className="text-white/80 text-4xl ml-2 group-hover:text-green-400 transition-colors duration-300" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Modal Instagram */}
-{isModalOpen && selectedEvent && (
-  <div
-    className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm"
-    onClick={(e) => {
-      // Solo cerrar si se hace clic directamente en el fondo, no dentro del modal
-      if (e.target.id === "modal-backdrop") {
-        setIsModalOpen(false);
-        setSelectedEvent(null);
-      }
-    }}
-    id="modal-backdrop"
-  >
-    <div
-      className="bg-black p-6 rounded-lg max-w-md w-full relative text-center"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button
-        onClick={() => {
-          setIsModalOpen(false);
-          setSelectedEvent(null);
-        }}
-        className="absolute top-2 right-4 text-white text-2xl font-bold z-10"
-      >
-        &times;
-      </button>
-      <div className="text-white text-lg font-semibold italic mb-4">INSTAGRAM REELS</div>
-      <div
-        className="instagram-embed"
-        dangerouslySetInnerHTML={{
-          __html: `
-            <blockquote 
-              class="instagram-media" 
-              data-instgrm-permalink="${selectedEvent.igLink}" 
-              data-instgrm-version="14" 
-              style="background:#fff; border:0; margin: 0 auto; max-width:540px; width:100%;">
-            </blockquote>
-          `,
-        }}
-      />
-    </div>
-  </div>
-)}
+      {isModalOpen && selectedEvent && (
+        <EventModal selectedEvent={selectedEvent} onClose={closeModal} />
+      )}
 
 
 
 
 
       {/* Contacto */}
-      <section id="contact" className="rounded-2xl text-white p-5 mt-20">
-        <div className="flex flex-col items-center justify-center text-center space-y-6 w-full">
-          <h2 className="text-3xl font-bold italic uppercase">Contacto</h2>
-          <div className="w-full md:w-2/4">
+      <section id="contact" className="w-full py-24 relative overflow-hidden">
+        {/* Decorative Background for Contact */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-neutral-950/80 -z-10"></div>
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-green-900/10 rounded-full blur-[150px] -z-10"></div>
+        
+        <div className="max-w-6xl mx-auto px-4 relative z-10 flex flex-col items-center">
+          
+          <div className="w-full flex flex-col items-center p-4 md:p-8">
+            
+            <h2 className="text-4xl md:text-5xl font-extrabold italic uppercase tracking-widest text-white drop-shadow-lg mb-8">
+              Contacto
+            </h2>
+            
+            <div className="w-full md:w-2/3 lg:w-1/2 text-center mb-10 space-y-4">
+              <p className="text-neutral-300 text-lg leading-relaxed">
+                <span className="font-bold text-white">LOWFREQMX</span>, Sello discográfico y plataforma multicultural que promueve la cultura del Drum and Bass y del Jungle en México.
+              </p>
+              <p className="text-neutral-400 text-md leading-relaxed">
+                Soportado por los DJs más grandes de su género a nivel mundial, es un impulsor para talentos emergentes que necesitan un espacio en la escena local.
+              </p>
+              <p className="text-green-400 font-semibold tracking-wide uppercase mt-4">
+                Información y contrataciones
+              </p>
+            </div>
 
-          <p className="text-start"><strong>LOWFREQMX</strong>, Sello discográfico y plataforma multicultural que promueve la cultura del Drum and Bass y del Jungle en México. Soportado por los DJs más grandes de su género a nivel mundial, es un impulsor para talentos emergentes que necesitan un espacio en la escena local.</p>
-            <p className="text-start"> Información y contrataciones.</p>
-          </div>
-          <div className="w-full flex justify-center">
-            <div className="w-full md:w-2/4">
+            <div className="w-full md:w-2/3 lg:w-1/2">
               <ContactForm />
             </div>
+
           </div>
-          <div className="flex flex-col items-center">
-            <img className="w-20 h-20" src={logoLow} alt="Lowfreq Logo" loading="lazy" />
-            <p className="mt-2 text-xs">LOWFREQMX®</p>
+
+          <div className="flex flex-col items-center mt-16 opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <img className="w-16 h-16 object-contain" src={logoLow} alt="Lowfreq Logo" loading="lazy" />
+            <p className="mt-3 text-xs tracking-[0.2em] font-medium text-neutral-400 uppercase">LOWFREQMX®</p>
           </div>
+
         </div>
       </section>
     </>

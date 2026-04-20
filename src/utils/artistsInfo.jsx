@@ -109,27 +109,17 @@ En cualquier momento, es probable que encuentres un tema de Dunk en la sección 
 
     {
         id: 8,
-        name: "Viewer",
-        image: "/assets/imagenes/artists/viewer2.webp",
-        description: ` Viewer es un DJ y productor de drum and bass reconocido a
-    nivel mundial. Su música ha sido tocada por leyendas como LTJ
-    Bukem y London Elektricity, y ha colaborado con artistas
-    prominentes del género, como Scott Allen, Danny Wheeler,
-    mSdoS, FX909 y T.R.A.C.
-    Estas colaboraciones y el apoyo de figuras influyentes le han
-    abierto puertas en festivales como Locus Tulum, y sus temas
-    han sido presentados en BBC Radio 1, Rinse FM, KOOL FM y
-    Liquicity. Además, ha presentado un episodio en el podcast de
-    SUNANDBASS.
-    Sus sets, influenciados por el Liquid Funk y Soulful, capturan la
-    esencia del drum and bass con un toque de elegancia y
-    profundidad.`,
+        name: "Eblue",
+        image: "/assets/imagenes/artists/Eblue.jpg",
+        description: `Eblue es un dj y productor de la CDMX, ha sido pionero en México difundiendo la cultura jungle-dnb desde mediados de los 90, desde sus primeras presentaciones ha mostrado un estilo y una temática que linda con un alucinante africanismo sideral y una revisión futurista de la historia y sentimiento musical negro. Como heredero de esta cultura, sus selecciones son eclécticas y luminosas, transitando del drum and bass atmosférico y soul a latitudes más cálidas con el ragga jungle y la cultura sonidera jamaicana-soundsystem-. Estas influencias se escuchan en su música, editada en sellos como Parador Análogo, Soul Deep Recordings, Funkstuff y Soulridaz.
+
+Eblue is a dj and producer from Mexico City, he has been a pioneer in his country spreading the jungle-dnb culture since mid 90s, since his first gigs he has shown a style and thematic bordering on amazing sidereal Africanism and a futuristic review of history and black musical feeling. As inheritor of this culture, he plays eclectic and luminous selections, moving from atmospheric soul dnb to lower latitudes with ragga jungle and the influence of Jamaican soundsystem culture. This kind of influences can be heard in his work as a producer on labels like Parador Análogo, Soul Deep, Funkstuff and Soulridaz.`,
         video1: "...",
         video2: "...",
-        downloadLink: "https://www.dropbox.com/scl/fi/tpnlsi9mbzkd5uyck8y47/Viewer-2024-Presskit-ESV5-1.pdf?rlkey=wgcvwuollv8gr2yr4uyqi9qk7&st=7m5hjvcy&dl=0",
-        instagramLink: "https://www.instagram.com/viewerdrumandbass?igsh=MWVrMzUxanUwNXZpbg==",
-        spotyfyLink: "https://open.spotify.com/artist/3brIpzYE3Tb7zxAPyaGjxj?si=qLj7cov4R5CvOFDoMvAbVw",
-        spotifyEmbed: "https://open.spotify.com/embed/artist/3brIpzYE3Tb7zxAPyaGjxj?utm_source=generator",
+        downloadLink: null,
+        instagramLink: "https://www.instagram.com/eblue_mx/",
+        spotyfyLink: "https://open.spotify.com/artist/4XqrcZIffCt7HW28TT8Y1A",
+        spotifyEmbed: "https://open.spotify.com/embed/artist/4XqrcZIffCt7HW28TT8Y1A?utm_source=generator",
         facebookLink: null
     },
 
@@ -151,29 +141,16 @@ En cualquier momento, es probable que encuentres un tema de Dunk en la sección 
 
     {
         id: 10,
-        name: "Jack Virgil",
-        image: "/assets/imagenes/artists/JV.webp",
-        description: `
-"Jack Virgil" es una inmersión en los vibrantes mundos del Drum and bass y el
-Psytrance. Con una fusión de subgéneros que incluyen Jump Up, Dancefloor y liquid.
-Jack Virgil ofrece una experiencia sonora única que desafía las convenciones y
-cautiva los sent
-idos.
-Emergiendo como uno de los proyectos más prometedores del Drum and Bass en
-México, Jack Virgil se ha ganado un lugar en la escena musical firmando en grandes
-disqueras nacionales e internacionales como: A Records, Monta Records y IX
-Recorders; comp
-artiendo escenarios con renombrados artistas nacionales e
-internacionales como: Phase One, Ghengar, HE$H, Isaac Maya, Ed Solo, G-Shellz, Aiokai, Ambroz, Keel, Deafny y Tyke.
-Jack Virgil ha tenido participacion en eventos y festivales como Mad House: Asylum,
-Jungle Cakes Takeover, EDC Mexico 2024 (invitado) y EDC Mexico 2025.`,
-        downloadLink: "https://www.dropbox.com/scl/fo/7djshtbcq4bauzq6ms267/AGHeTWPRfKUc2tuUA-UU6VE/JACK%20VIRGIL/PRESSKIT?dl=0&preview=PK+Jack+Virgil+2025.pdf&rlkey=3a5qmnrlzp3dtt4jw7qb3o6ed&subfolder_nav_tracking=1",
+        name: "DMS",
+        image: "/assets/imagenes/artists/DMS.png",
+        description: `Dj de drumandbass,jungle y bass desde el 2009, fundador de DirtyBasscrew, ha colaborado con artistas y colectivos nacionales e internacionales; Algunos de sus tracks fueron publicados por los sellos Low Frequency, Junglex y Break Koast.`,
+        downloadLink: null,
         video1: "...",
         video2: "...",
-        instagramLink: "https://www.instagram.com/jackvirgilmusic/",
-        facebookLink: "https://www.facebook.com/people/Jack-Virgil/61552005825414/",
-        spotyfyLink: "https://open.spotify.com/intl-es/artist/14ue0rFM1Q8ommRtE8klMD",
-        spotifyEmbed: "https://open.spotify.com/embed/artist/14ue0rFM1Q8ommRtE8klMD?utm_source=generator",
+        instagramLink: "https://www.instagram.com/deemee5e/",
+        facebookLink: null,
+        spotyfyLink: "https://open.spotify.com/artist/0vxz8VyDmvsriKoQqftT3L",
+        spotifyEmbed: "https://open.spotify.com/embed/artist/0vxz8VyDmvsriKoQqftT3L?utm_source=generator",
         
     },
 

@@ -11,30 +11,32 @@ const ArtistProfile = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
-    const handlePopState = () => {
-      if (isModalOpen) setIsModalOpen(false);
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && isModalOpen) {
+        closeModal();
+      }
     };
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isModalOpen]);
 
   const openModal = () => {
     setIsModalOpen(true);
-    window.history.pushState({ modal: true }, '');
+    setErrorMessage("");
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
     setIsSubmitted(false);
-    if (window.history.state?.modal) {
-      window.history.back();
-    }
+    setErrorMessage("");
   };
 
   if (!artist) {
@@ -150,24 +152,31 @@ const ArtistProfile = () => {
                   e.preventDefault();
                   const form = e.target;
                   const data = new FormData(form);
+                  
+                  setIsLoading(true);
+                  setErrorMessage("");
 
                   try {
-                    await fetch("https://formsubmit.co/ajax/mayaisaac@gmail.com", {
+                    const response = await fetch("https://formsubmit.co/ajax/mayaisaac@gmail.com", {
                       method: "POST",
                       headers: {
                         Accept: "application/json",
                       },
                       body: data,
                     });
+                    
+                    if (!response.ok) throw new Error("Network response was not ok");
 
                     setIsSubmitted(true);
-
                     setTimeout(() => {
                       setIsModalOpen(false);
                       setIsSubmitted(false);
                     }, 2000);
                   } catch (error) {
                     console.error("Error enviando el formulario", error);
+                    setErrorMessage("Ocurrió un error al enviar tu solicitud. Intenta de nuevo.");
+                  } finally {
+                    setIsLoading(false);
                   }
                 }}
                 className="space-y-4"
@@ -193,10 +202,14 @@ const ArtistProfile = () => {
 
                 <button
                   type="submit"
-                  className="bg-neutral-500 hover:bg-neutral-600 text-white px-6 py-2 rounded-md w-full"
+                  disabled={isLoading}
+                  className="bg-neutral-500 hover:bg-neutral-600 text-white px-6 py-2 rounded-md w-full disabled:opacity-50 disabled:cursor-not-allowed transition"
                 >
-                  Enviar solicitud
+                  {isLoading ? "Enviando..." : "Enviar solicitud"}
                 </button>
+                {errorMessage && (
+                  <p className="text-red-400 text-center text-sm">{errorMessage}</p>
+                )}
               </form>
             ) : (
               <p className="text-green-400 text-center text-lg font-bold">
