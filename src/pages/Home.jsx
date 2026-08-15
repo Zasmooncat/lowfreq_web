@@ -106,8 +106,10 @@ const Home = () => {
       <section
         id="eventos"
         ref={eventsRef}
-        className="w-full relative py-20 bg-neutral-950/40"
+        className="w-full relative py-20"
       >
+        {/* Fondo con fade suave arriba y abajo */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-950/50 to-transparent pointer-events-none -z-10" />
         <div className="flex justify-center items-center mb-16 relative z-10 w-full">
           <h2 className="text-4xl md:text-5xl font-extrabold italic uppercase tracking-widest text-white drop-shadow-lg">
             Eventos
