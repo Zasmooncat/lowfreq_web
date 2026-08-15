@@ -159,34 +159,83 @@ const Home = () => {
         {/* Decorative Background for Contact */}
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-neutral-950/80 -z-10"></div>
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-green-900/10 rounded-full blur-[150px] -z-10"></div>
-        
-        <div className="max-w-6xl mx-auto px-4 relative z-10 flex flex-col items-center">
-          
-          <div className="w-full flex flex-col items-center p-4 md:p-8">
-            
-            <h2 className="text-4xl md:text-5xl font-extrabold italic uppercase tracking-widest text-white drop-shadow-lg mb-8">
-              Contacto
-            </h2>
-            
-            <div className="w-full md:w-2/3 lg:w-1/2 text-center mb-10 space-y-4">
-              <p className="text-neutral-300 text-lg leading-relaxed">
-                <span className="font-bold text-white">LOWFREQMX</span>, Sello discográfico y plataforma multicultural que promueve la cultura del Drum and Bass y del Jungle en México.
-              </p>
-              <p className="text-neutral-400 text-md leading-relaxed">
-                Soportado por los DJs más grandes de su género a nivel mundial, es un impulsor para talentos emergentes que necesitan un espacio en la escena local.
-              </p>
-              <p className="text-green-400 font-semibold tracking-wide uppercase mt-4">
-                Información y contrataciones
-              </p>
+
+        <div className="w-full px-6 md:px-12 lg:px-20 relative z-10">
+
+          {/* Section title */}
+          <h2 className="text-4xl md:text-5xl font-extrabold italic uppercase tracking-widest text-white drop-shadow-lg mb-12 text-center">
+            Contacto
+          </h2>
+
+          {/* Two-column layout */}
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+
+            {/* LEFT — Bio */}
+            <div className="w-full lg:w-1/2 flex flex-col">
+
+              {/* Header */}
+              <div className="mb-8">
+                <p className="text-xs tracking-[0.35em] uppercase text-green-500 font-semibold mb-3">Drum &amp; Bass &amp; Jungle — Hecho en México</p>
+                <h3 className="text-3xl md:text-4xl font-black uppercase tracking-widest text-white">LOWFREQMX</h3>
+                <div className="mt-4 h-px w-24 bg-gradient-to-r from-green-500 to-transparent" />
+              </div>
+
+              {/* Paragraphs */}
+              <div className="space-y-5 text-neutral-300 text-sm md:text-base leading-relaxed">
+                <p>
+                  Fundado en <span className="text-white font-semibold">2009</span>, LOWFREQMX es uno de los sellos independientes con mayor trayectoria dentro de la cultura Drum &amp; Bass y Jungle en toda América. Con 17 años de actividad ininterrumpida y más de 200 lanzamientos, el sello ha construido un catálogo que reúne a algunos de los artistas y productores más representativos de la escena internacional y nacional.
+                </p>
+                <p>
+                  Desde sus inicios, LOWFREQMX ha mantenido una premisa fundamental: <span className="text-white font-semibold">la música original como eje de identidad</span>. Para el sello, seleccionar música es una parte de la cultura; crearla, desarrollarla y darle una identidad propia es otra dimensión. Bajo esta filosofía, LOWFREQMX entiende el talento como un proceso: no se compra, se construye.
+                </p>
+                <p>
+                  A lo largo de su trayectoria, el sello ha desarrollado una plataforma que va más allá de la edición discográfica. Su actividad integra producción musical, eventos, colaboración artística, desarrollo de talento y cultura Sound System, construyendo un ecosistema alrededor del Drum &amp; Bass y el Jungle desde México hacia el mundo.
+                </p>
+              </div>
+
+              {/* Digital Ape highlight */}
+              <div className="my-8 border border-green-500/25 bg-green-950/20 rounded-2xl p-6 backdrop-blur-sm">
+                <p className="text-xs tracking-[0.3em] uppercase text-green-500 font-semibold mb-2">Sound System</p>
+                <h4 className="text-xl font-black uppercase tracking-wider text-white mb-3">Digital Ape</h4>
+                <p className="text-neutral-300 text-sm leading-relaxed">
+                  El primer y mejor Sound System de Drum &amp; Bass y Jungle en México. Con una infraestructura de alta potencia compuesta por <span className="text-white font-semibold">10 scoops</span> y aproximadamente <span className="text-white font-semibold">2.5 toneladas</span> de equipo, DIGITAL APE representa la dimensión física y colectiva de la filosofía LOWFREQMX: el sonido no solamente se escucha; se construye, se experimenta y se vive.
+                </p>
+              </div>
+
+              <div className="space-y-5 text-neutral-300 text-sm md:text-base leading-relaxed">
+                <p>
+                  Paralelamente, LOWFREQMX ha desarrollado una agenda de eventos que conecta a México con figuras relevantes de la escena internacional. Sin limitarse al formato tradicional de booking, el sello busca generar <span className="text-white font-semibold">colaboraciones reales</span> entre artistas, productores y proyectos, creando vínculos que trascienden una presentación y contribuyen al desarrollo de la escena local.
+                </p>
+                <p className="text-neutral-400 italic text-sm">
+                  Esta visión define la diferencia entre contratar talento y formar parte de una cultura.
+                </p>
+              </div>
+
+              {/* Closing manifesto */}
+              <div className="mt-10 space-y-1">
+                <div className="mb-6 h-px w-24 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+                <p className="text-neutral-400 text-xs uppercase tracking-widest mb-4">Durante 17 años, el principio se ha mantenido intacto</p>
+                <p className="text-white text-base font-semibold">En LOWFREQMX no solo se selecciona el sonido.</p>
+                <p className="text-green-400 text-lg font-black uppercase tracking-widest">El sonido se crea.</p>
+                <p className="text-green-400 text-lg font-black uppercase tracking-widest">El sonido se construye.</p>
+              </div>
             </div>
 
-            <div className="w-full md:w-2/3 lg:w-1/2">
+            {/* RIGHT — Form */}
+            <div className="w-full lg:w-1/2 flex flex-col">
+              <p className="text-green-400 font-semibold justify-center text-center tracking-wide uppercase text-sm mb-6">
+                Información y contrataciones
+              </p>
               <ContactForm />
+              <div className="flex justify-center mt-10 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <img src={logo} alt="LOWFREQMX Logo" className="w-36 md:w-80 object-contain" loading="lazy" />
+              </div>
             </div>
 
           </div>
 
-          <div className="flex flex-col items-center mt-16 opacity-70 hover:opacity-100 transition-opacity duration-300">
+          {/* Footer logo */}
+          <div className="flex flex-col items-center mt-20 opacity-70 hover:opacity-100 transition-opacity duration-300">
             <img className="w-16 h-16 object-contain" src={logoLow} alt="Lowfreq Logo" loading="lazy" />
             <p className="mt-3 text-xs tracking-[0.2em] font-medium text-neutral-400 uppercase">LOWFREQMX®</p>
           </div>
