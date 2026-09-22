@@ -50,8 +50,7 @@ const Home = () => {
           alt="LOWFREQMX Flyer"
           className="w-full h-auto block"
         />
-        {/* Overlay oscuro para legibilidad */}
-        <div className="absolute inset-0 bg-black/40" />
+
 
         {/* Botón Preventas WhatsApp */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
