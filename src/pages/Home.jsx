@@ -43,12 +43,12 @@ const Home = () => {
   return (
     <>
       {/* Cover — Flyer Jam */}
-      <section id="cover" className="relative w-full">
-        {/* Imagen de portada — se muestra completa */}
+      <section id="cover" className="relative w-full flex justify-center">
+        {/* Imagen de portada — tamaño original */}
         <img
           src={flyerJam}
           alt="LOWFREQMX Flyer"
-          className="w-full h-auto block"
+          className="block max-w-full h-auto md:my-30"
         />
 
 
