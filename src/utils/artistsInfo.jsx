@@ -13,9 +13,44 @@ const artistsInfo = [
         facebookLink: null
     },
 
-
     {
         id: 2,
+        name: "Benny Page",
+        image: "/assets/imagenes/artists/Benny-Page.webp",
+        description: `Benny Page es uno de los productores británicos que mejor ha conectado el Drum & Bass y Jungle con el reggae, dub y la cultura sound system. Originario de Reading, Inglaterra, comenzó a destacar a mediados de los 2000 y alcanzó notoriedad con Turn Down The Lights, publicado en Digital Soundboy, sello de Shy FX. Su sonido se caracteriza por bajos contundentes, ritmos de inspiración ragga y una fuerte identidad jamaicana. A lo largo de su carrera ha colaborado con figuras como Congo Natty, Top Cat, MC Spyda y numerosos artistas de reggae y dancehall. También ha desarrollado proyectos propios como High Culture Recordings y Dubshotta, consolidándose como una figura importante de la escena Jungle y Bass Music internacional.`,
+        downloadLink: null,
+        spotifyEmbed: "https://open.spotify.com/embed/artist/602tBNQHNIZL6tsB2RHAV1?utm_source=generator",
+        spotyfyLink: "https://open.spotify.com/intl-es/artist/602tBNQHNIZL6tsB2RHAV1?si=Z7KWJKzKRzWiz6VTt42ABA",
+        instagramLink: "https://www.instagram.com/bennypagemusic/",
+        facebookLink: null,
+    },
+
+    {
+        id: 3,
+        name: "Dope Ammo",
+        image: "/assets/imagenes/artists/dope_ammo.jpg.jpeg",
+        description: `Dope Ammo es el proyecto del productor y DJ británico Anil "Coco" Shah, una figura con más de dos décadas de trayectoria dentro del Drum & Bass y Jungle. Sus raíces se remontan a los años 90, cuando formó parte de The Drunken Masters, antes de consolidar Dope Ammo y su propio sello discográfico. Su sonido combina Jungle, Jump Up, Reggae y una marcada energía de dancefloor. Ha trabajado con artistas como Micky Finn, Aphrodite, Serial Killaz y Benny Page, además de realizar remixes para artistas fuera de la escena D&B. Uno de sus mayores éxitos llegó con su remix de Let Me Be Your Fantasy de Baby D, que alcanzó el No. 2 de Beatport y se convirtió en uno de los remixes de Drum & Bass más vendidos de la plataforma.`,
+        downloadLink: null,
+        spotifyEmbed: "https://open.spotify.com/embed/artist/4PLyMikr67pzFRAIlplshI?utm_source=generator",
+        spotyfyLink: "https://open.spotify.com/intl-es/artist/4PLyMikr67pzFRAIlplshI?si=QM6VzjvsT_C8ZtMc9rxUPw",
+        instagramLink: "https://www.instagram.com/dopeammo/",
+        facebookLink: null,
+    },
+
+    {
+        id: 4,
+        name: "Jam Thieves",
+        image: "/assets/imagenes/artists/jam_thieves.webp",
+        description: `Jam Thieves es un proyecto nacido en São Paulo, Brasil, inicialmente formado por Guilherme Lopes y João Neto. Desde sus comienzos desarrollaron una propuesta enfocada en el Minimal Drum & Bass, Rollers y Jungle, con bajos profundos, baterías precisas y una fuerte orientación hacia el dancefloor. Su música encontró reconocimiento internacional a través de sellos como Playaz, Dispatch, Hospital y RAM, convirtiéndolos en una de las propuestas brasileñas más reconocibles dentro del sonido minimal y deep del Drum & Bass. Desde 2020, Jam Thieves funciona como proyecto solista, manteniendo su característica combinación de groove, bajos contundentes y producción detallada. Su música refleja además sus raíces urbanas y la experiencia de la escena brasileña.`,
+        downloadLink: null,
+        spotifyEmbed: "https://open.spotify.com/embed/artist/0KRoepd5Q7vse8ehKnQdmk?utm_source=generator",
+        spotyfyLink: "https://open.spotify.com/intl-es/artist/0KRoepd5Q7vse8ehKnQdmk?si=lUpsN3FsRtarOGhsgq6l_A",
+        instagramLink: "https://www.instagram.com/jamthieves/",
+        facebookLink: null,
+    },
+
+    {
+        id: 5,
         name: "Tyke",
         image: "/assets/imagenes/artists/Tyke.webp",
         description: `Rebelde en todos los sentidos, sus raíces grafiteras sentaron las bases de un referente del drum & bass. 
@@ -30,12 +65,11 @@ const artistsInfo = [
         spotifyEmbed: "https://open.spotify.com/embed/artist/1sGQzK4pvwC2HF08W9feT8?utm_source=generator",
         spotyfyLink: "https://open.spotify.com/intl-es/artist/1sGQzK4pvwC2HF08W9feT8?si=5SMg6fEoQWGgZvyIx6DZ8g",
         instagramLink: "https://www.instagram.com/tyke_playaz/",
-        bandcampLink:null
+        bandcampLink: null
     },
 
-
     {
-        id: 3,
+        id: 6,
         name: "Dutta",
         image: "/assets/imagenes/artists/Dutta.webp",
         description: `Tras ser mencionado en la edición de 2019 de UKF como uno de los nombres más destacados de la nueva generación de productores de Jump Up, que han impulsado el sonido hacia el mainstream, la carrera de Dutta comenzó a tomar forma. Con el apoyo de las figuras más influyentes de la escena drum and bass, Dutta se consolida como un artista imprescindible para eventos en todo el mundo.`,
@@ -43,17 +77,14 @@ const artistsInfo = [
         spotifyEmbed: "https://open.spotify.com/embed/artist/10yIHb1NneKSlfeCoHtGwk?utm_source=generator",
         spotyfyLink: "https://open.spotify.com/intl-es/artist/10yIHb1NneKSlfeCoHtGwk?si=zwDhSdtzTUSaTGoOMyx0yA",
         instagramLink: "https://www.instagram.com/dutta_uk/",
-        
     },
 
-
-
     {
-        id: 4,
+        id: 7,
         name: "Mooncat",
         image: "/assets/imagenes/artists/mooncat_blue.webp",
-        description: `Dj/productor valenciano destacado por ser uno de los máximos exponentes dentro de la escena drum&bass nacional, con un estilo único e inconfundible tanto en sus producciones como en sus sets. 
- Su estilo se caracteriza por un sonido fresco , elegante y contundente cargado de pinceladas de reggae, remezclando temas clásicos llevándolos luego a la pista de baile de una forma magistral.
+        description: `Dj/productor valenciano destacado por ser uno de los máximos exponentes dentro de la escena drum&bass nacional, con un estilo único e inconfundible tanto en sus producciones como en sus sets. 
+ Su estilo se caracteriza por un sonido fresco , elegante y contundente cargado de pinceladas de reggae, remezclando temas clásicos llevándolos luego a la pista de baile de una forma magistral.
 En 2016 Mooncat lanza junto a Karlixx, Kursiva, Dubtime y Laura el sello de música electrónica especializado en drum&bass, reggae y jungle SOUTH YARD, donde podemos escuchar sus últimas producciones junto a un creciente catálogo de referencias de grandes artistas del género.`,
         downloadLink: "https://www.dropbox.com/scl/fo/mfxc8ymtqe3lgck9tawlb/APN2L8D-FOnO-l7rUBmQu3c?rlkey=reqm8y5slzq7ve359wsw1e3lq&st=2quj05sj&dl=0",
         spotifyEmbed: "https://open.spotify.com/embed/artist/4TpaRMxJFAVHyLunW3UvwW?utm_source=generator",
@@ -62,9 +93,8 @@ En 2016 Mooncat lanza junto a Karlixx, Kursiva, Dubtime y Laura el sello de mús
         bandcampLink: "https://mooncatdnb.bandcamp.com/"
     },
 
-
     {
-        id: 5,
+        id: 8,
         name: "Kursiva",
         image: "/assets/imagenes/artists/Kursiva.webp",
         description: `Dj y Prouctor con sede en Córdoba, España, Kursiva ha sido reconocido en una amplia gama de géneros musicales que crea en el estudio y toca en el escenario. Ritmos potentes y mezclas sólidas, trabajadas con la precisión de un cirujano de neurofunk, se combinan con elementos clásicos del reggae y el hip-hop para crear un sonido característico presente en todas sus producciones, independientemente del tipo de música bass: Jungle, Drum & Bass o Neurofunk.
@@ -73,12 +103,10 @@ Tras explorar la escena en los últimos años, 2018 parece ser el punto de parti
         spotifyEmbed: "https://open.spotify.com/embed/artist/1DMvj4SEEjbBdszYfv2yoY?utm_source=generator",
         spotyfyLink: "https://open.spotify.com/intl-es/artist/1DMvj4SEEjbBdszYfv2yoY?si=l5NgsZ64TgiC1bS__jtM-Q",
         instagramLink: "https://www.instagram.com/kursiva_music/",
-        
     },
 
-
     {
-        id: 6,
+        id: 9,
         name: "Dunk",
         image: "/assets/imagenes/artists/Dunk.webp",
         description: `Maestro del sonido minimalista. Una potencia increíble. Y una pegada brutal en cada producción. El paulista Dunk se basa constantemente en estos tres atributos para ofrecer un drum & bass de calidad que supera los límites de los sistemas de sonido de todo el mundo: una fuente fiable para DJs que cargan sus memorias USB o para oyentes que buscan algo para enriquecer su lista de reproducción.
@@ -88,12 +116,10 @@ En cualquier momento, es probable que encuentres un tema de Dunk en la sección 
         spotifyEmbed: "https://open.spotify.com/embed/artist/3to9W3JX4kSmj4TEGlKiDS?utm_source=generator",
         spotyfyLink: "https://open.spotify.com/intl-es/artist/3to9W3JX4kSmj4TEGlKiDS?si=tzDrX8zqRXqXODKf-hWNFA",
         instagramLink: "https://www.instagram.com/zasmooncat/",
-        
     },
 
-
     {
-        id: 7,
+        id: 10,
         name: "Aiokai",
         image: "/assets/imagenes/artists/Aiokai.webp",
         description: "Aiokai is a versatile drum & bass producer drawing from rave and bass music influences. His sound ranges from heavy neuro tracks like Hell Is Repetition (A Records) to high-energy jump-up bangers like Blue Eyes with Jack Virgil, and smooth liquid cuts like Take Me (4NC¥ // DarkMode). Known for his dynamic style and distinct identity, Aiokai moves seamlessly between moods without losing his signature touch.He has performed at major festivals including EDC Mexico (2023, 2024) and Locus Tulum 2022, as well as in countries like Italy, Germany, Croatia, and Colombia. As part of Mexico’s rising bass scene, Aiokai is affiliated with Jessica Audiffred’s A Records and Isaac Maya’s LOWFREQMX. He also runs IX Recorders, a label focused on forward-thinking and genre-pushing bass music.",
@@ -106,9 +132,8 @@ En cualquier momento, es probable que encuentres un tema de Dunk en la sección 
         facebookLink: "https://www.facebook.com/aiokai.dnb"
     },
 
-
     {
-        id: 8,
+        id: 11,
         name: "Eblue",
         image: "/assets/imagenes/artists/Eblue.jpg",
         description: `Eblue es un dj y productor de la CDMX, ha sido pionero en México difundiendo la cultura jungle-dnb desde mediados de los 90, desde sus primeras presentaciones ha mostrado un estilo y una temática que linda con un alucinante africanismo sideral y una revisión futurista de la historia y sentimiento musical negro. Como heredero de esta cultura, sus selecciones son eclécticas y luminosas, transitando del drum and bass atmosférico y soul a latitudes más cálidas con el ragga jungle y la cultura sonidera jamaicana-soundsystem-. Estas influencias se escuchan en su música, editada en sellos como Parador Análogo, Soul Deep Recordings, Funkstuff y Soulridaz.
@@ -123,9 +148,8 @@ Eblue is a dj and producer from Mexico City, he has been a pioneer in his countr
         facebookLink: null
     },
 
-
     {
-        id: 9,
+        id: 12,
         name: "Darkho",
         image: "/assets/imagenes/artists/Darkho.webp",
         description: "El representante más joven y uno de los mejores DJs de Drum&Bass/UKG en México. Además de un sonido único en sus producciones que en combinación con su destreza en las tornamesas, destacan en cada show y lo hace conectar increíble con la gente.",
@@ -138,9 +162,8 @@ Eblue is a dj and producer from Mexico City, he has been a pioneer in his countr
         facebookLink: null
     },
 
-
     {
-        id: 10,
+        id: 13,
         name: "DMS",
         image: "/assets/imagenes/artists/DMS.png",
         description: `Dj de drumandbass,jungle y bass desde el 2009, fundador de DirtyBasscrew, ha colaborado con artistas y colectivos nacionales e internacionales; Algunos de sus tracks fueron publicados por los sellos Low Frequency, Junglex y Break Koast.`,
@@ -151,28 +174,10 @@ Eblue is a dj and producer from Mexico City, he has been a pioneer in his countr
         facebookLink: null,
         spotyfyLink: "https://open.spotify.com/artist/0vxz8VyDmvsriKoQqftT3L",
         spotifyEmbed: "https://open.spotify.com/embed/artist/0vxz8VyDmvsriKoQqftT3L?utm_source=generator",
-        
-    },
-
-
-    {
-        id: 11,
-        name: "Sirius Soundz",
-        image: "/assets/imagenes/artists/sirius.webp",
-        description: `Selector musical y Emcee desde el 2013. Basado en Salamanca, Guanajuato.
-Especializado en ritmos rotos y frecuencias bajas derivados de la cultura del
-Sound System Jamaicano a través de su conexión con el Reino Unido.`,
-        downloadLink: "https://www.dropbox.com/scl/fo/7djshtbcq4bauzq6ms267/AKX3_0l7qY6HHlWV1ZUPgCw/SIRIUS?dl=0&rlkey=3a5qmnrlzp3dtt4jw7qb3o6ed&subfolder_nav_tracking=1",
-        video1: "...",
-        video2: "...",
-        spotifyEmbed: "https://open.spotify.com/embed/artist/3EUoCfHEq00Bv09zadLzgI?utm_source=generator",
-        spotyfyLink: "https://open.spotify.com/intl-es/artist/3EUoCfHEq00Bv09zadLzgI",
-        instagramLink: "https://www.instagram.com/sirius_soundz/",
-        facebookLink: null,
     },
 
     {
-        id: 12,
+        id: 14,
         name: "Ras Jahshua",
         image: "/assets/imagenes/artists/Ras.webp",
         description: `Cantautor originario de Ciudad de México; Xochimilco
@@ -191,7 +196,6 @@ conecte con él; sesiones de Sound System sin
 importar que sean Selectores o Live Acts, él va a detonar la
 pista de baile
 .`,
-
         downloadLink: "https://www.dropbox.com/scl/fi/1ty8oh0mr97nd2yofcsaj/Ras-Jahshua-PK-2-1.pdf?rlkey=eo49sxf486ibwdxctx2bu1cqn&st=b2zgba08&dl=0",
         instagramLink: "https://www.instagram.com/rasjahshua/",
         facebookLink: "https://www.facebook.com/RasJahshua",
@@ -199,24 +203,20 @@ pista de baile
         spotyfyLink: "https://open.spotify.com/intl-es/artist/69tTGKazNr7p4qdIoEKLrM?si=fpqqiUDwSdimf14qsHRNgw&nd=1&dlsi=5c760ccd1e804daf"
     },
 
-
     {
-        id: 13,
+        id: 15,
         name: "8pril",
         image: "/assets/imagenes/artists/8pril.webp",
         description: "8PRIL es una Dj de Drum and Bass mexicana que destaca en la escena por su capturante selección musical con un mezcla muy impecable que la ha llevado a colaborar en presentaciones con grandes pioneros del género.",
         downloadLink: "https://www.dropbox.com/scl/fi/qyozd6bf13zd5y9rnrnmr/Presskit-8PRIL.pdf?rlkey=6cx2hwkrvr4e878govtrlnvyd&e=1&st=2roqbb8j&dl=0",
-
         video1: "...",
         video2: "...",
-
         instagramLink: "https://www.instagram.com/8prilmx/",
         facebookLink: null
     },
 
-
     {
-        id: 14,
+        id: 16,
         name: "VJ BALA",
         image: "/assets/imagenes/artists/VJBALA.webp",
         description: `Marina Mx (VJ BALA)
@@ -229,14 +229,12 @@ su quehacer artístico entre las artes,
 nuevas tecnologías y la cultura digital.
 Practicante de Lengua de Señas Mexicana.`,
         downloadLink: "https://www.dropbox.com/scl/fo/7djshtbcq4bauzq6ms267/AMNFwB83-zQgfSIpofmm4K0/VJ%20BALA?dl=0&preview=Marina+MX.pdf&rlkey=3a5qmnrlzp3dtt4jw7qb3o6ed&subfolder_nav_tracking=1",
-
         instagramLink: "https://www.instagram.com/marina.mx/",
         facebookLink: null
     },
 
-
     {
-        id: 15,
+        id: 17,
         name: "B-Dub",
         image: "/assets/imagenes/artists/b-dub.webp",
         description: "DJ Originario del estado de Mexico, inicia su carrera en 2008 inspirado siempre por el Dnb y pasando por otros generos (Moombahton, Dubstep, Trap) tomando como base de su estilo la linea de bajo, hoy en dia siendo parte de Low Freq con un Drum and Bass oscuro y acelerado como lo es el neurophunk y el jump up con bajos potentes marcando su propio estilo.",
@@ -247,9 +245,8 @@ Practicante de Lengua de Señas Mexicana.`,
         facebookLink: "https://www.facebook.com/b.dub.aka.askeroso.krw"
     },
 
-
     {
-        id: 16,
+        id: 18,
         name: "Digital Ape Sound System",
         image: "/assets/imagenes/artists/DigitalApeSoundSystem.webp",
         description: "Primer Sound System de Drum And Bass/Jungle en México por LowFreqMx e Isaac Maya. Con motivo de nuestro XVI aniversario, nos dimos a la titánica tarea de construir nuestro propio sistema de sonido, adecuándolo a las necesidades y exigencias que requiere el género. Enfocado al bass y las grandes presiones sonoras que se requieren para disfrutar de este estilo de música. Cuenta con más de 2 toneladas de equipo y cerca de 20.000 watts de potencia.",
@@ -259,7 +256,6 @@ Practicante de Lengua de Señas Mexicana.`,
         instagramLink: "https://www.instagram.com/digitalapess/",
         facebookLink: null
     },
-
 ];
 
 export default artistsInfo;
