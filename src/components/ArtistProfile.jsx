@@ -53,43 +53,65 @@ const ArtistProfile = () => {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="bg-linear-to-b from-neutral-500/50 to-black mt-20 p-6 rounded-2xl">
-        <img src={logo} alt="logo" className="w-60 mx-auto bg-transparent" />
-        <div className="text-center rounded-2xl p-6 mt-2">
+      {/* Logo superior */}
+      <div className="flex justify-center pt-8">
+        <img src={logo} alt="logo" className="w-52 sm:w-60 bg-transparent" />
+      </div>
+
+      {/* Card del Artista */}
+      <div className="bg-gradient-to-b from-neutral-900/90 to-black rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl">
+        {/* Foto en la parte superior de la card (sin recortes + fondo blur ambiental) */}
+        <div className="w-full h-80 sm:h-96 md:h-[500px] overflow-hidden relative bg-black flex items-center justify-center">
+          {/* Fondo difuminado ambiental con los colores de la foto */}
+          <img
+            src={artist.image}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-35 scale-110 pointer-events-none"
+          />
+          {/* Foto principal completa sin ningún recorte */}
           <img
             src={artist.image}
             alt={artist.name}
-            className="w-64 h-64 object-cover rounded-full mx-auto border-8"
+            className="relative z-10 max-w-full max-h-full object-contain drop-shadow-2xl"
           />
-          <h1 className="text-3xl font-bold mt-4">{artist.name}</h1>
-          <section className="flex justify-center gap-6 text-2xl mt-4">
-            {artist.instagramLink && (
-              <a href={artist.instagramLink} target="_blank" rel="noreferrer">
-                <FaInstagram className="text-gray-500 hover:text-pink-500" />
-              </a>
-            )}
-            {artist.spotyfyLink && (
-              <a href={artist.spotyfyLink} target="_blank" rel="noreferrer">
-                <FaSpotify className="text-gray-500 hover:text-green-400" />
-              </a>
-            )}
-            {artist.facebookLink && (
-              <a href={artist.facebookLink} target="_blank" rel="noreferrer">
-                <FaFacebook className="text-gray-500 hover:text-blue-500" />
-              </a>
-            )}
-            {artist.bandcampLink && (
-              <a href={artist.bandcampLink} target="_blank" rel="noreferrer">
-                <FaBandcamp className="text-gray-500 hover:text-cyan-400" />
-              </a>
-            )}
-          </section>
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none z-10" />
         </div>
 
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-2 mt-1">Biografía</h2>
-          <p className="text-gray-400">{artist.description}</p>
-        </section>
+        <div className="p-6 sm:p-8 space-y-6">
+          <div className="text-center">
+            <h1 className="text-3xl sm:text-4xl font-extrabold uppercase tracking-wide text-white">
+              {artist.name}
+            </h1>
+            <section className="flex justify-center gap-6 text-2xl mt-4">
+              {artist.instagramLink && (
+                <a href={artist.instagramLink} target="_blank" rel="noreferrer">
+                  <FaInstagram className="text-gray-400 hover:text-pink-500 transition-colors" />
+                </a>
+              )}
+              {artist.spotyfyLink && (
+                <a href={artist.spotyfyLink} target="_blank" rel="noreferrer">
+                  <FaSpotify className="text-gray-400 hover:text-green-400 transition-colors" />
+                </a>
+              )}
+              {artist.facebookLink && (
+                <a href={artist.facebookLink} target="_blank" rel="noreferrer">
+                  <FaFacebook className="text-gray-400 hover:text-blue-500 transition-colors" />
+                </a>
+              )}
+              {artist.bandcampLink && (
+                <a href={artist.bandcampLink} target="_blank" rel="noreferrer">
+                  <FaBandcamp className="text-gray-400 hover:text-cyan-400 transition-colors" />
+                </a>
+              )}
+            </section>
+          </div>
+
+          <section>
+            <h2 className="text-xl font-semibold text-white mb-2">Biografía</h2>
+            <p className="text-gray-300 leading-relaxed whitespace-pre-line">{artist.description}</p>
+          </section>
+        </div>
       </div>
 
       <section>
