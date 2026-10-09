@@ -48,7 +48,7 @@ const Home = () => {
         <img
           src={flyerJam}
           alt="LOWFREQMX Flyer"
-          className="block max-w-full h-auto md:my-30"
+          className="block max-w-full h-auto mt-20 md:my-30"
         />
 
 
